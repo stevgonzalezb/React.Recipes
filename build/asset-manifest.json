@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/React.Recipes/static/css/main.a140d39b.chunk.css",
+    "main.js": "/React.Recipes/static/js/main.bc2b2d28.chunk.js",
+    "main.js.map": "/React.Recipes/static/js/main.bc2b2d28.chunk.js.map",
+    "runtime-main.js": "/React.Recipes/static/js/runtime-main.c93c00e7.js",
+    "runtime-main.js.map": "/React.Recipes/static/js/runtime-main.c93c00e7.js.map",
+    "static/js/2.ee56c0b1.chunk.js": "/React.Recipes/static/js/2.ee56c0b1.chunk.js",
+    "static/js/2.ee56c0b1.chunk.js.map": "/React.Recipes/static/js/2.ee56c0b1.chunk.js.map",
+    "static/js/3.46ae002b.chunk.js": "/React.Recipes/static/js/3.46ae002b.chunk.js",
+    "static/js/3.46ae002b.chunk.js.map": "/React.Recipes/static/js/3.46ae002b.chunk.js.map",
+    "index.html": "/React.Recipes/index.html",
+    "static/css/main.a140d39b.chunk.css.map": "/React.Recipes/static/css/main.a140d39b.chunk.css.map",
+    "static/js/2.ee56c0b1.chunk.js.LICENSE.txt": "/React.Recipes/static/js/2.ee56c0b1.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/React.Recipes/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c93c00e7.js",
+    "static/js/2.ee56c0b1.chunk.js",
+    "static/css/main.a140d39b.chunk.css",
+    "static/js/main.bc2b2d28.chunk.js"
+  ]
+}
