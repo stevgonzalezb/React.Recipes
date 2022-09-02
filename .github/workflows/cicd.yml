@@ -13,6 +13,8 @@ on:
 
 env: 
   CI: false
+permissions:
+  id-token: write
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
