@@ -14,7 +14,7 @@ function App() {
         <Route path='/channel/:id' element={<div />} />
         <Route path='/search/:searchTerm' element={<div />} />
       </Routes>
-      <Sidebar/>
+      {/* <Sidebar/> */}
   </BrowserRouter>
   )
 }
