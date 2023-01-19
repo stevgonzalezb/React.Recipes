@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Project Inspiration
 https://tasty.co/
+https://developer.edamam.com/recipe-demo
