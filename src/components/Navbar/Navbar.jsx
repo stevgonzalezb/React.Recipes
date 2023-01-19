@@ -1,10 +1,11 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react';
+import { useState } from 'react'
+import { Link } from "react-router-dom"
+
 import Logo from '../../assets/logo-no-background.png'
-import { Link } from "react-router-dom";
 
 
-export default function Example() {
+export default function Navbar() {
 
   // Mobile Sidebar flag.
   const [sidebar, setSidebar] = useState(false)
@@ -16,7 +17,7 @@ export default function Example() {
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* <!-- Mobile menu button --> */}
           <button type="button" className="inline-flex items-center justify-center rounded-md p-2 hover:bg-yellow-200 text-gray-700 "
-            onClick={() => setSidebar(!sidebar)}>
+            onClick={ () => setSidebar(!sidebar) }>
               { sidebar ? <XMarkIcon className="block h-6 w-6"/> : <Bars3Icon className="block h-6 w-6"/> }
           </button>
         </div>

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import Navbar from "./components/Navbar/Navbar"
+import Sidebar from "./components/Sidebar/Sidebar"
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route path='/channel/:id' element={<div />} />
         <Route path='/search/:searchTerm' element={<div />} />
       </Routes>
+      <Sidebar/>
   </BrowserRouter>
-  );
+  )
 }
 
 export default App;
