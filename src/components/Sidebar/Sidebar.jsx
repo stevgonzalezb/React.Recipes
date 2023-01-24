@@ -20,11 +20,11 @@ export default function Sidebar() {
     const [sidebar, setSidebar] = useState(false)
 
     return (
-        <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-white">
+        <div className="flex flex-col border-r border-gray-200 bg-white md:max-w-xs ">
 
             {/* Sidebar */}
-            <div className={ sidebar ? "block" : "hidden lg:block" }>
-                <nav className="flex-1 bg-white" aria-label="Sidebar">
+            <div className={ "flex-col min-h-screen items-stretch" + (sidebar ? " flex flex-col" : " hidden md:flex") }>
+                <nav className="flex-1 bg-white flex flex-col " aria-label="Sidebar">
                 {navigation.map((item) => (
                     <a
                     key={item.name}
@@ -57,10 +57,14 @@ export default function Sidebar() {
                     </a>
                 ))}
                 </nav>
+                
+                <div className=''>
+                    Developed by Steven Gonzalez.
+                </div>
             </div>
 
             {/* Mobile toggle button */}
-            <div className='h-10 w-10 rounded-r-xl flex justify-center bg-gray-500'
+            <div className='h-10 w-10 rounded-r-xl flex justify-center bg-gray-500 md:hidden'
                 onClick={ () => setSidebar(!sidebar) }>
                 <FunnelIcon className='w-6 text-white' />
             </div>

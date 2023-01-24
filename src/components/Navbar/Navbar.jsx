@@ -11,7 +11,7 @@ export default function Navbar() {
   const [sidebar, setSidebar] = useState(false)
 
   return (
-  <nav className="bg-white shadow">
+  <nav className="bg-white shadow h-fit w-full">
     <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="relative flex h-16 justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
