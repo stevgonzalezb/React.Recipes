@@ -28,8 +28,8 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="hidden sm:flex sm:gap-4 font-medium">
-            <Link to="/" className="inline-flex items-center border-b-2 border-yellow-600 p-4 font-bold text-gray-700">Recipes</Link>
-            {/* <Link to="/" className="inline-flex items-center border-b-2 border-transparent p-4 text-gray-500 hover:border-gray-300 hover:text-gray-700">Drinks</Link> */}
+            <Link to="/" className="inline-flex items-center border-b-2 border-yellow-600 p-4 text-gray-700">Recipes</Link>
+            {/* <Link to="/" className="inline-flex items-center border-b-2 border-transparent p-4 text-gray-500 hover:border-yellow-300 hover:text-gray-700">Drinks</Link> */}
           </div>
         </div>
       </div>
@@ -38,8 +38,8 @@ export default function Navbar() {
     {/* <!-- Mobile menu, show/hide based on menu state. --> */}
     <div className={ sidebar ? "sm:hidden" : "hidden" }>
       <div className="flex flex-col gap-2 font-medium">
-        <Link to="/" className="border-l-4 text-gray-700 border-yellow-600 bg-yellow-100 py-4 px-2 font-bold">Recipes</Link>
-        {/* <Link to="/" className="border-l-4 text-gray-500 border-transparent py-4 px-2 hover:text-gray-700 hover:border-gray-300 hover:bg-yellow-100">Drinks</Link> */}
+        <Link to="/" className="border-l-4 text-gray-700 border-yellow-600 hover:bg-yellow-100 py-4 px-2">Recipes</Link>
+        {/* <Link to="/" className="border-l-4 text-gray-500 border-transparent py-4 px-2 hover:text-gray-700 hover:border-yellow-300 hover:bg-yellow-100">Drinks</Link> */}
       </div>
     </div>
   </nav>

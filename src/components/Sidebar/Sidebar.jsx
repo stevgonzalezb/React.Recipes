@@ -23,7 +23,7 @@ export default function Sidebar() {
         <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-white">
 
             {/* Sidebar */}
-            <div className={ sidebar ? "sm:hidden" : "hidden" }>
+            <div className={ sidebar ? "block" : "hidden lg:block" }>
                 <nav className="flex-1 bg-white" aria-label="Sidebar">
                 {navigation.map((item) => (
                     <a
@@ -60,7 +60,7 @@ export default function Sidebar() {
             </div>
 
             {/* Mobile toggle button */}
-            <div className='h-10 w-10 rounded-r-xl flex justify-center bg-gray-500 lg:hidden'
+            <div className='h-10 w-10 rounded-r-xl flex justify-center bg-gray-500'
                 onClick={ () => setSidebar(!sidebar) }>
                 <FunnelIcon className='w-6 text-white' />
             </div>
