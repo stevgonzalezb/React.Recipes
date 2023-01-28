@@ -7,13 +7,13 @@ import Sidebar from "./components/Sidebar/Sidebar"
 function App() {
   return (
     <BrowserRouter>
-      <Navbar/>
-      <Routes>
+      {/* <Navbar/> */}
+      {/* <Routes>
         <Route exact path='/' element={<div />} />
         <Route path='/video/:id' element={<div />} />
         <Route path='/channel/:id' element={<div />} />
         <Route path='/search/:searchTerm' element={<div />} />
-      </Routes>
+      </Routes> */}
       <Sidebar/>
   </BrowserRouter>
   )
