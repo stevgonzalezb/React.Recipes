@@ -10,15 +10,14 @@ export default function Sidebar() {
 
     return (
         <>        
-            <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-                {/* <!-- Sidebar component, swap this element with another sidebar if you like --> */}
-                <div className="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-white pt-5">
-                <div className="flex flex-shrink-0 items-center px-4">
-                    <img className="h-8 w-auto" src={Logo} alt="Your Company"/>
-                </div>
-                <div className="mt-5 flex flex-grow flex-col bg-red-100">
+            <div className="h-screen md:flex md:w-64 md:flex-col">
+                <div className="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-white">
+                    <div className="flex flex-shrink-0 items-center">
+                        <img className="h-8 w-auto" src={Logo} alt="Cookify"/>
+                    </div>
+                    <div className="flex flex-grow flex-col bg-red-100">
 
-                </div>
+                    </div>
                 </div>
             </div>
         </>
