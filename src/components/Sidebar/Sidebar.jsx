@@ -10,11 +10,12 @@ export default function Sidebar() {
 
     return (
         <>        
-            <div className="h-screen md:flex md:w-64 md:flex-col">
-                <div className="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-white">
-                    <div className="flex flex-shrink-0 items-center">
-                        <img className="h-8 w-auto" src={Logo} alt="Cookify"/>
+            <div className="h-screen py-2 px-4 border-r border-gray-200 md:flex md:w-64">
+                <div className="flex flex-grow flex-col gap-2 overflow-y-auto bg-white">
+                    <div className="flex flex-shrink-0 justify-center items-center">
+                        <img className="h-12 w-auto" src={Logo} alt="Cookify"/>
                     </div>
+
                     <div className="flex flex-grow flex-col bg-red-100">
 
                     </div>
