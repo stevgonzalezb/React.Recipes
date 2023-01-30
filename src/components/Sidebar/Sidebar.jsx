@@ -33,7 +33,7 @@ export default function Sidebar({ closeSidebar, isOpen }) {
                     </div>
                     <div className='py-2 px-4'>
                         <button type="button" className="flex h-10 w-10 items-center justify-center text-white border-2 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                                onClick={event => closeSidebar()}>
+                                onClick={() => closeSidebar()}>
                             <XMarkIcon className="block h-6 w-6"/>
                         </button>
                     </div>
