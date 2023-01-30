@@ -30,19 +30,13 @@ export default function Sidebar() {
                 </div>
                 </div>
 
-                <main class="flex-1">
-                <div class="py-6">
-                    <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                    <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+                <main class="flex-1 pt-4 px-4">
+                    <div class="max-w-7xl">
+                    <div class="flex flex-col gap-2">
+                            <h1 class="text-2xl font-semibold text-gray-900">Content</h1>
+                            <div class="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
+                        </div>
                     </div>
-                    <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                    {/* <!-- Replace with your content --> */}
-                    <div class="py-4">
-                        <div class="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
-                    </div>
-                    {/* <!-- /End replace --> */}
-                    </div>
-                </div>
                 </main>
             </div>   
         </>
