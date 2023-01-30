@@ -1,4 +1,4 @@
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import Logo from '../../assets/logo-no-background.png'
 
@@ -6,11 +6,11 @@ import Logo from '../../assets/logo-no-background.png'
 function CheckComponent({tittle, icon}) {
     return (
         <>
-            <div className='px-4 py-2 flex flex-row justify-start items-center w-fit bg-gray-200'>
-                <div className='h-5 w-5'>
-                    <XMarkIcon className=""/>
+            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full'>
+                <div className='h-6 w-6 rounded-full bg-yellow-200 p-1 cursor-pointer'>
+                    <PlusIcon className=""/>
                 </div>
-                <div className=''>{tittle}</div>
+                <div className='flex font-normal text-sm'>{tittle}</div>
             </div>
         </>
     )
@@ -20,7 +20,7 @@ export default function Sidebar({ closeSidebar, isOpen }) {
     return (
         <> 
             <div className='flex flex-row bg-gray-50'>
-                <div className="h-screen py-2 px-4 border-r border-gray-200 md:flex w-64 hidden">
+                <div className="h-screen p-2 border-r border-gray-200 md:flex w-64 hidden">
                     <div className="flex flex-grow flex-col gap-2 overflow-y-auto bg-gray-50">
                         <div className="flex flex-shrink-0 justify-center items-center ">
                             <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
@@ -28,7 +28,11 @@ export default function Sidebar({ closeSidebar, isOpen }) {
 
                         <div className="flex flex-grow flex-col ">
                             <div className='font-bold text-lg p-2'>Allergies</div>
-                            <CheckComponent tittle={"Celery Free"}/>
+                            <div className='flex flex-row gap-2 flex-wrap'>
+                                <CheckComponent tittle={"Celery Free"}/>
+                                <CheckComponent tittle={"Celery Free"}/>
+                                <CheckComponent tittle={"Celery Free"}/>
+                            </div>
                         </div>
                     </div>
                 </div>
