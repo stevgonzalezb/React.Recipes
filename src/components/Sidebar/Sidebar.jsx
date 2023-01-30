@@ -1,16 +1,20 @@
-import { PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
+import { PlusIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline'
 
 import Logo from '../../assets/logo-no-background.png'
 
 
 function CheckComponent({tittle, icon}) {
+
+    const [checked, setchecked] = useState(false)
+
     return (
         <>
             <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full'>
-                <div className='h-6 w-6 rounded-full bg-yellow-200 p-1 cursor-pointer'>
-                    <PlusIcon className=""/>
+                <div className='h-6 w-6 rounded-full bg-yellow-50 p-1 cursor-pointer' onClick={() => setchecked(!checked)}>
+                    {checked ? <CheckIcon className=""/> : <PlusIcon className=""/>}
                 </div>
-                <div className='flex font-normal text-sm'>{tittle}</div>
+                <div className='flex font-medium text-sm'>{tittle}</div>
             </div>
         </>
     )
