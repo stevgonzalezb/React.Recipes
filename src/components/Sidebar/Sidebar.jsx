@@ -48,9 +48,14 @@ export default function Sidebar({ closeSidebar, isOpen }) {
                                 <img className="h-12 w-auto" src={Logo} alt="Cookify"/>
                             </div>
 
-                            <div className="flex flex-grow flex-col bg-red-100">
-
+                            <div className="flex flex-grow flex-col ">
+                            <div className='font-bold text-lg p-2'>Allergies</div>
+                            <div className='flex flex-row gap-2 flex-wrap'>
+                                <CheckComponent tittle={"Celery Free"}/>
+                                <CheckComponent tittle={"Celery Free"}/>
+                                <CheckComponent tittle={"Celery Free"}/>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div className='py-2 px-4'>
