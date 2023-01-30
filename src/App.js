@@ -12,21 +12,20 @@ function App() {
   return (
     <>
       <div className="flex flex-row">
-      <Sidebar closeSidebar={handleMobileSidebar} isOpen={sidebar}/>
-      <Recipes openSidebar={handleMobileSidebar} />
+        <Sidebar closeSidebar={handleMobileSidebar} isOpen={sidebar}/>
+        <Recipes openSidebar={handleMobileSidebar} />
       </div>
     </>
   )
 
   function handleMobileSidebar() {
+
+    // Toggle flag.
     setSidebar(!sidebar)
 
-    if (!sidebar) {
-        document.body.style.overflow = 'hidden'
-    } else {
-        document.body.style.overflow = 'auto'
-    }
-    console.log(document.body.style.overflow)
+    // Deactivate scroll when menu is open.
+    if (!sidebar) document.body.style.overflow = 'hidden'
+    else document.body.style.overflow = 'auto'
   }
 }
 
