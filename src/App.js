@@ -20,11 +20,13 @@ function App() {
 
   function handleMobileSidebar() {
     setSidebar(!sidebar)
-    if (sidebar) {
+
+    if (!sidebar) {
         document.body.style.overflow = 'hidden'
     } else {
         document.body.style.overflow = 'auto'
     }
+    console.log(document.body.style.overflow)
   }
 }
 
