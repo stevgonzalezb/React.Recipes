@@ -19,7 +19,7 @@ export default function Sidebar({ closeSidebar, isOpen }) {
                     </div>
                 </div>
 
-                <div className={ isOpen ? "sm:hidden flex absolute top-0 h-full w-full z-40 right-0 gap-8 justify-start flex-1 bg-gray-600 bg-opacity-75" : "hidden absolute top-0 h-full w-full z-40 right-0 gap-8 justify-start flex-1 bg-gray-600 bg-opacity-75" }>
+                <div className={ isOpen ? "sm:hidden flex absolute top-0 h-screen w-full z-40 right-0 gap-8 justify-start flex-1 bg-gray-600 bg-opacity-75" : "hidden absolute top-0 h-full w-full z-40 right-0 gap-8 justify-start flex-1 bg-gray-600 bg-opacity-75" }>
                     <div className="h-screen  border-r border-gray-200 flex w-64">
                         <div className="flex py-2 px-4 flex-grow flex-col gap-2 overflow-y-auto bg-white">
                             <div className="flex flex-shrink-0 justify-center items-center">
