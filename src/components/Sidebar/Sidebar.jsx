@@ -1,18 +1,17 @@
-import { useState } from 'react'
 import { PlusIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline'
 
 import Logo from '../../assets/logo-no-background.png'
 
 
-function CheckComponent({tittle}) {
+function CheckComponent({tittle, selected, handleClick}) {
 
-    const [checked, setchecked] = useState(false)
+    // const [checked, setchecked] = useState(selected)
 
     return (
         <>
-            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full cursor-pointer' onClick={() => setchecked(!checked)}>
-                <div className={(checked ? "bg-yellow-200" : "bg-yellow-50") + ' h-6 w-6 rounded-full p-1'}>
-                    {checked ? <CheckIcon className=""/> : <PlusIcon className=""/>}
+            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full cursor-pointer' onClick={() => handleClick(tittle)}>
+                <div className={(selected ? "bg-yellow-200" : "bg-yellow-50") + ' h-6 w-6 rounded-full p-1'}>
+                    {selected ? <CheckIcon className=""/> : <PlusIcon className=""/>}
                 </div>
                 <div className='flex font-medium text-sm'>{tittle}</div>
             </div>
@@ -20,7 +19,7 @@ function CheckComponent({tittle}) {
     )
 }
 
-export default function Sidebar({ closeSidebar, isOpen }) {    
+export default function Sidebar({ closeSidebar, isOpen, filters, handleClick}) {    
     return (
         <> 
             <div className='flex flex-row bg-gray-50'>
@@ -33,9 +32,11 @@ export default function Sidebar({ closeSidebar, isOpen }) {
                         <div className="flex flex-grow flex-col ">
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
-                                <CheckComponent tittle={"Celery Free"}/>
-                                <CheckComponent tittle={"Celery Free"}/>
-                                <CheckComponent tittle={"Celery Free"}/>
+                                {
+                                    filters.Allergies.map((type) => (
+                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleClick} />
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
