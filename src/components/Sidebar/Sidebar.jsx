@@ -52,9 +52,11 @@ export default function Sidebar({ closeSidebar, isOpen, filters, handleClick}) {
                             <div className="flex flex-grow flex-col ">
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
-                                <CheckComponent tittle={"Celery Free"}/>
-                                <CheckComponent tittle={"Celery Free"}/>
-                                <CheckComponent tittle={"Celery Free"}/>
+                                {
+                                    filters.Allergies.map((type) => (
+                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleClick} />
+                                    ))
+                                }
                             </div>
                         </div>
                         </div>

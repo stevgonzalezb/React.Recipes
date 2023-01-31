@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar"
 import Recipes from "./pages/Recipes/Recipes"
 
 
-const Filters = {
+let Filters = {
 
   Allergies: [
       {
