@@ -73,6 +73,7 @@ function App() {
 
   function handleSelectFilter(title) {
     console.log(title)
+    // Check this: https://beta.reactjs.org/learn/sharing-state-between-components
   }
 }
 
