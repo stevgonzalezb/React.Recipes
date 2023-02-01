@@ -5,48 +5,6 @@ import Sidebar from "./components/Sidebar/Sidebar"
 import Recipes from "./pages/Recipes/Recipes"
 
 
-let Filters = {
-
-  Allergies: [
-      {
-          Name: "Celery-free",
-          Selected: true
-      },
-      {
-          Name: "Crustacean-free",
-          Selected: false
-      },
-      {
-          Name: "Gluten-free",
-          Selected: false
-      },
-      {
-          Name: "Dairy-free",
-          Selected: false
-      },
-      {
-          Name: "Egg-free",
-          Selected: false
-      },
-      {
-          Name: "Fish-free",
-          Selected: false
-      },
-  ],
-
-  Diets: [
-      {
-          Name: "Alcohol-free",
-          Selected: false
-      },
-      {
-          Name: "High-Fiber",
-          Selected: false
-      },
-  ]
-}
-
-
 function App() {
 
   // Mobile Sidebar flag.
@@ -73,10 +31,6 @@ function App() {
 
   function handleSelectFilter(title) {
     console.log(title)
-
-    Filters.Allergies[0].Selected = !Filters.Allergies[0].Selected
-
-    // Check this: https://beta.reactjs.org/learn/sharing-state-between-components
   }
 }
 
