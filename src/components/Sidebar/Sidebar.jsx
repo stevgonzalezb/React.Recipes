@@ -40,7 +40,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
     return (
         <> 
             <div className='flex flex-row bg-gray-50'>
-                <div className="h-screen p-2 border-r border-gray-200 md:flex w-64 hidden">
+                <div className="h-screen p-2 border-r border-gray-200 md:flex w-72 hidden">
                     <div className="flex flex-grow flex-col gap-2 overflow-y-auto bg-gray-50">
                         <div className="flex flex-shrink-0 justify-center items-center ">
                             <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
@@ -80,8 +80,17 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
                                 {
-                                    FILTERS.Allergies.map((type) => (
-                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleSelectFilter} />
+                                    FILTERS.Allergies.map((value) => (
+                                        <CheckComponent tittle={value} handleSelectFilter={handleSelectFilter} />
+                                    ))
+                                }
+                            </div>
+
+                            <div className='font-bold text-lg p-2'>Diets</div>
+                            <div className='flex flex-row gap-2 flex-wrap'>
+                                {
+                                    FILTERS.Diets.map((value) => (
+                                        <CheckComponent tittle={value} handleSelectFilter={handleSelectFilter} />
                                     ))
                                 }
                             </div>
