@@ -17,11 +17,11 @@ export default function CheckToggle({ tittle, handleSelectFilter }) {
 
     return (
         <>
-            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full cursor-pointer' onClick={() => handleOnClick(tittle)}>
-                <div className={(checked ? "bg-yellow-200" : "bg-yellow-50") + ' h-6 w-6 rounded-full p-1'}>
-                    {checked ? <CheckIcon className=""/> : <PlusIcon className=""/>}
+            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-300 rounded-full cursor-pointer' onClick={() => handleOnClick(tittle)}>
+                <div className={(checked ? "bg-yellow-600" : "bg-gray-50") + ' h-6 w-6 rounded-full p-1'}>
+                    {checked ? <CheckIcon className="text-white"/> : <PlusIcon className="text-gray-700"/>}
                 </div>
-                <div className='flex font-medium text-sm'>{tittle}</div>
+                <div className={ (checked ? "font-medium" : "font-normal") + ' flex text-sm text-gray-700'}>{tittle}</div>
             </div>
         </>
     )
