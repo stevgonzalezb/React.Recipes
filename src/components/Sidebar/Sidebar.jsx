@@ -25,8 +25,9 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                         <hr/>
                         <div className="flex flex-grow flex-col gap-2">
 
-                            <div className='flex flex-col gap-1 bg-gray-100 cursor-pointer' onClick={() => setOpen(!open)}>
-                                <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg'>
+                            <div className='flex flex-col gap-1 bg-gray-100'>
+                                <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg cursor-pointer' 
+                                        onClick={() => setOpen(!open)}>
                                     <div className='font-bold text-lg text-gray-600'>Allergies</div>
                                     <div className='flex flex-row items-center justify-center gap-1'>
                                         <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
@@ -69,24 +70,25 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                             </div>
 
                             <div className="flex flex-grow flex-col ">
-                                <div className='flex flex-col gap-1 bg-gray-100 cursor-pointer' onClick={() => setOpen(!open)}>
-                                    <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg'>
-                                        <div className='font-bold text-lg text-gray-600'>Allergies</div>
-                                        <div className='flex flex-row items-center justify-center gap-1'>
-                                            <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
-                                                <div className=' text-white text-sm'>2</div>
-                                            </div>
-                                            <ChevronDownIcon className='h-4 w-4' />
+                            <div className='flex flex-col gap-1 bg-gray-100'>
+                                <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg cursor-pointer' 
+                                        onClick={() => setOpen(!open)}>
+                                    <div className='font-bold text-lg text-gray-600'>Allergies</div>
+                                    <div className='flex flex-row items-center justify-center gap-1'>
+                                        <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
+                                            <div className=' text-white text-sm'>2</div>
                                         </div>
-                                    </div>
-                                    <div className={(open ? 'flex': 'hidden') + ' flex-row gap-2 flex-wrap '}>
-                                        {
-                                            FILTERS.Allergies.map((value) => (
-                                                <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
-                                            ))
-                                        }
+                                        <ChevronDownIcon className='h-4 w-4' />
                                     </div>
                                 </div>
+                                <div className={(open ? 'flex': 'hidden') + ' flex-row gap-2 flex-wrap '}>
+                                    {
+                                        FILTERS.Allergies.map((value) => (
+                                            <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
+                                        ))
+                                    }
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
