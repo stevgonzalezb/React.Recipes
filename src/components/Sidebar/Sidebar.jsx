@@ -2,16 +2,68 @@ import { PlusIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline'
 
 import Logo from '../../assets/logo-no-background.png'
 
+import React, { useState } from 'react';
 
-function CheckComponent({tittle, selected, handleClick}) {
 
-    // const [checked, setchecked] = useState(selected)
+const Filters = {
+
+    Allergies: [
+        {
+            Name: "Celery-free",
+            Selected: true
+        },
+        {
+            Name: "Crustacean-free",
+            Selected: false
+        },
+        {
+            Name: "Gluten-free",
+            Selected: false
+        },
+        {
+            Name: "Dairy-free",
+            Selected: false
+        },
+        {
+            Name: "Egg-free",
+            Selected: false
+        },
+        {
+            Name: "Fish-free",
+            Selected: false
+        },
+    ],
+  
+    Diets: [
+        {
+            Name: "Alcohol-free",
+            Selected: false
+        },
+        {
+            Name: "High-Fiber",
+            Selected: false
+        },
+    ]
+}
+
+
+function CheckComponent({tittle, handleSelectFilter}) {
+
+    const [checked, setChecked] = useState(false)
+
+    function handleOnClick(tittle) {
+        // Change state.
+        setChecked(!checked)
+
+        // Return selected to parent.
+        return handleSelectFilter(tittle)
+    }
 
     return (
         <>
-            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full cursor-pointer' onClick={() => handleClick(tittle)}>
-                <div className={(selected ? "bg-yellow-200" : "bg-yellow-50") + ' h-6 w-6 rounded-full p-1'}>
-                    {selected ? <CheckIcon className=""/> : <PlusIcon className=""/>}
+            <div className='p-2 gap-1 flex flex-row justify-start items-center w-fit bg-gray-200 rounded-full cursor-pointer' onClick={() => handleOnClick(tittle)}>
+                <div className={(checked ? "bg-yellow-200" : "bg-yellow-50") + ' h-6 w-6 rounded-full p-1'}>
+                    {checked ? <CheckIcon className=""/> : <PlusIcon className=""/>}
                 </div>
                 <div className='flex font-medium text-sm'>{tittle}</div>
             </div>
@@ -19,7 +71,8 @@ function CheckComponent({tittle, selected, handleClick}) {
     )
 }
 
-export default function Sidebar({ closeSidebar, isOpen, filters, handleClick}) {    
+export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {    
+
     return (
         <> 
             <div className='flex flex-row bg-gray-50'>
@@ -33,8 +86,8 @@ export default function Sidebar({ closeSidebar, isOpen, filters, handleClick}) {
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
                                 {
-                                    filters.Allergies.map((type) => (
-                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleClick} />
+                                    Filters.Allergies.map((type) => (
+                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleSelectFilter={handleSelectFilter} />
                                     ))
                                 }
                             </div>
@@ -53,8 +106,8 @@ export default function Sidebar({ closeSidebar, isOpen, filters, handleClick}) {
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
                                 {
-                                    filters.Allergies.map((type) => (
-                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleClick} />
+                                    Filters.Allergies.map((type) => (
+                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleSelectFilter} />
                                     ))
                                 }
                             </div>

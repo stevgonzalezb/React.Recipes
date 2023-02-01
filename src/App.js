@@ -55,7 +55,7 @@ function App() {
   return (
     <>
       <div className="flex flex-row">
-        <Sidebar closeSidebar={handleMobileSidebar} isOpen={sidebar} filters={Filters} handleClick={handleSelectFilter} />
+        <Sidebar closeSidebar={handleMobileSidebar} isOpen={sidebar} handleSelectFilter={handleSelectFilter} />
         <Recipes openSidebar={handleMobileSidebar} />
       </div>
     </>
@@ -73,6 +73,9 @@ function App() {
 
   function handleSelectFilter(title) {
     console.log(title)
+
+    Filters.Allergies[0].Selected = !Filters.Allergies[0].Selected
+
     // Check this: https://beta.reactjs.org/learn/sharing-state-between-components
   }
 }
