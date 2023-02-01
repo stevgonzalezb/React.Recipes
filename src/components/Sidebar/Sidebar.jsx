@@ -5,45 +5,9 @@ import Logo from '../../assets/logo-no-background.png'
 import React, { useState } from 'react';
 
 
-const Filters = {
-
-    Allergies: [
-        {
-            Name: "Celery-free",
-            Selected: true
-        },
-        {
-            Name: "Crustacean-free",
-            Selected: false
-        },
-        {
-            Name: "Gluten-free",
-            Selected: false
-        },
-        {
-            Name: "Dairy-free",
-            Selected: false
-        },
-        {
-            Name: "Egg-free",
-            Selected: false
-        },
-        {
-            Name: "Fish-free",
-            Selected: false
-        },
-    ],
-  
-    Diets: [
-        {
-            Name: "Alcohol-free",
-            Selected: false
-        },
-        {
-            Name: "High-Fiber",
-            Selected: false
-        },
-    ]
+const FILTERS = {
+    Allergies: [ "Celery-free", "Crustacean-free", "Gluten-free", "Dairy-free", "Egg-free", "Fish-free", "Lupine-free", "Mustard-free", "Peanut-free", "Sesame-free", "Shellfish-free", "Soy-free", "Tree-Nut-free", "Wheat-free" ],
+    Diets: [ "Alcohol-free", "High-Fiber", "Balanced", "Keto", "High-Protein", "Kidney friendly", "Low-Carb", "Low-Fat", "Low-Sodium", "No oil added", "No-sugar", "Pork-free",  "Red meat-free", "Vegan", "Vegetarian" ]
 }
 
 
@@ -83,11 +47,21 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                         </div>
 
                         <div className="flex flex-grow flex-col ">
+
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
                                 {
-                                    Filters.Allergies.map((type) => (
-                                        <CheckComponent tittle={type.Name} selected={type.Selected} handleSelectFilter={handleSelectFilter} />
+                                    FILTERS.Allergies.map((value) => (
+                                        <CheckComponent tittle={value} handleSelectFilter={handleSelectFilter} />
+                                    ))
+                                }
+                            </div>
+
+                            <div className='font-bold text-lg p-2'>Diets</div>
+                            <div className='flex flex-row gap-2 flex-wrap'>
+                                {
+                                    FILTERS.Diets.map((value) => (
+                                        <CheckComponent tittle={value} handleSelectFilter={handleSelectFilter} />
                                     ))
                                 }
                             </div>
@@ -106,7 +80,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                             <div className='font-bold text-lg p-2'>Allergies</div>
                             <div className='flex flex-row gap-2 flex-wrap'>
                                 {
-                                    Filters.Allergies.map((type) => (
+                                    FILTERS.Allergies.map((type) => (
                                         <CheckComponent tittle={type.Name} selected={type.Selected} handleClick={handleSelectFilter} />
                                     ))
                                 }
