@@ -36,7 +36,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                         <ChevronDownIcon className='h-4 w-4' />
                                     </div>
                                 </div>
-                                <div className={(open === 'allergies' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
+                                <div className={(open === 'allergies' ? 'flex': 'hidden') + ' rounded-b-lg flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                     {
                                         FILTERS.Allergies.map((value) => (
                                             <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
@@ -56,7 +56,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                         <ChevronDownIcon className='h-4 w-4' />
                                     </div>
                                 </div>
-                                <div className={(open === 'diets' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
+                                <div className={(open === 'diets' ? 'flex': 'hidden') + ' rounded-b-lg flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                     {
                                         FILTERS.Diets.map((value) => (
                                             <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
@@ -89,7 +89,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                             <ChevronDownIcon className='h-4 w-4' />
                                         </div>
                                     </div>
-                                    <div className={(open === 'allergies' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
+                                    <div className={(open === 'allergies' ? 'flex': 'hidden') + ' rounded-b-lg flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                         {
                                             FILTERS.Allergies.map((value) => (
                                                 <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
@@ -109,7 +109,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                             <ChevronDownIcon className='h-4 w-4' />
                                         </div>
                                     </div>
-                                    <div className={(open === 'diets' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
+                                    <div className={(open === 'diets' ? 'flex': 'hidden') + ' rounded-b-lg flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                         {
                                             FILTERS.Diets.map((value) => (
                                                 <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
