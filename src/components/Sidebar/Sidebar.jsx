@@ -12,7 +12,7 @@ const FILTERS = {
 
 export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {    
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState('')
 
     return (
         <> 
@@ -25,9 +25,9 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                         <hr/>
                         <div className="flex flex-grow flex-col gap-2">
 
-                            <div className='flex flex-col gap-1 bg-gray-100'>
-                                <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg cursor-pointer' 
-                                        onClick={() => setOpen(!open)}>
+                            <div className='flex flex-col'>
+                                <div className={ (open === 'allergies' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-200 cursor-pointer'} 
+                                        onClick={() =>  open === 'allergies' ? setOpen('') : setOpen('allergies')}>
                                     <div className='font-bold text-lg text-gray-600'>Allergies</div>
                                     <div className='flex flex-row items-center justify-center gap-1'>
                                         <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
@@ -36,7 +36,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                         <ChevronDownIcon className='h-4 w-4' />
                                     </div>
                                 </div>
-                                <div className={(open ? 'flex': 'hidden') + ' flex-row gap-2 flex-wrap '}>
+                                <div className={(open === 'allergies' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                     {
                                         FILTERS.Allergies.map((value) => (
                                             <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
@@ -46,11 +46,17 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                             </div>
 
                             <div>
-                                <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg'>
+                            <div className={ (open === 'diets' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-200 cursor-pointer'} 
+                                        onClick={() => open === 'diets' ? setOpen('') : setOpen('diets')}>
                                     <div className='font-bold text-lg text-gray-600'>Diets</div>
-                                    <ChevronDownIcon className='h-4 w-4' />
+                                    <div className='flex flex-row items-center justify-center gap-1'>
+                                        <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
+                                            <div className=' text-white text-sm'>2</div>
+                                        </div>
+                                        <ChevronDownIcon className='h-4 w-4' />
+                                    </div>
                                 </div>
-                                <div className='hidden flex flex-row gap-2 flex-wrap'>
+                                <div className={(open === 'diets' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                     {
                                         FILTERS.Diets.map((value) => (
                                             <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
@@ -69,27 +75,49 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                 <img className="h-12 w-auto" src={Logo} alt="Cookify"/>
                             </div>
 
-                            <div className="flex flex-grow flex-col ">
-                            <div className='flex flex-col gap-1 bg-gray-100'>
-                                <div className='flex flex-row items-center justify-between p-2 bg-gray-200 rounded-lg cursor-pointer' 
-                                        onClick={() => setOpen(!open)}>
-                                    <div className='font-bold text-lg text-gray-600'>Allergies</div>
-                                    <div className='flex flex-row items-center justify-center gap-1'>
-                                        <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
-                                            <div className=' text-white text-sm'>2</div>
+                            <hr/>
+                            <div className="flex flex-grow flex-col gap-2">
+
+                                <div className='flex flex-col'>
+                                    <div className={ (open === 'allergies' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-200 cursor-pointer'} 
+                                            onClick={() =>  open === 'allergies' ? setOpen('') : setOpen('allergies')}>
+                                        <div className='font-bold text-lg text-gray-600'>Allergies</div>
+                                        <div className='flex flex-row items-center justify-center gap-1'>
+                                            <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
+                                                <div className=' text-white text-sm'>2</div>
+                                            </div>
+                                            <ChevronDownIcon className='h-4 w-4' />
                                         </div>
-                                        <ChevronDownIcon className='h-4 w-4' />
+                                    </div>
+                                    <div className={(open === 'allergies' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
+                                        {
+                                            FILTERS.Allergies.map((value) => (
+                                                <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
+                                            ))
+                                        }
                                     </div>
                                 </div>
-                                <div className={(open ? 'flex': 'hidden') + ' flex-row gap-2 flex-wrap '}>
-                                    {
-                                        FILTERS.Allergies.map((value) => (
-                                            <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
-                                        ))
-                                    }
+
+                                <div>
+                                <div className={ (open === 'diets' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-200 cursor-pointer'} 
+                                            onClick={() => open === 'diets' ? setOpen('') : setOpen('diets')}>
+                                        <div className='font-bold text-lg text-gray-600'>Diets</div>
+                                        <div className='flex flex-row items-center justify-center gap-1'>
+                                            <div className='bg-gray-700 rounded-full h-5 w-5 flex items-center justify-center'>
+                                                <div className=' text-white text-sm'>2</div>
+                                            </div>
+                                            <ChevronDownIcon className='h-4 w-4' />
+                                        </div>
+                                    </div>
+                                    <div className={(open === 'diets' ? 'flex': 'hidden') + ' flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
+                                        {
+                                            FILTERS.Diets.map((value) => (
+                                                <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
+                                            ))
+                                        }
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
+                        </div>
                         </div>
                     </div>
                     <div className='py-2 px-4'>
