@@ -28,7 +28,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                             <div className='flex flex-col'>
                                 <div className={ (open === 'allergies' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-700 cursor-pointer'} 
                                         onClick={() =>  open === 'allergies' ? setOpen('') : setOpen('allergies')}>
-                                    <div className='font-bold text-normal text-gray-50 font-inter'>Allergies</div>
+                                    <div className='font-bold text-normal text-gray-50 '>Allergies</div>
                                     <div className='flex flex-row items-center justify-center gap-1'>
                                         <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
                                             <div className=' text-white text-sm font-semibold'>2</div>
@@ -48,7 +48,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                             <div>
                                 <div className={ (open === 'diets' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-700 cursor-pointer'} 
                                         onClick={() =>  open === 'diets' ? setOpen('') : setOpen('diets')}>
-                                    <div className='font-bold text-normal text-gray-50 font-inter'>Diets</div>
+                                    <div className='font-bold text-normal text-gray-50 '>Diets</div>
                                     <div className='flex flex-row items-center justify-center gap-1'>
                                         <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
                                             <div className=' text-white text-sm font-semibold'>2</div>
@@ -81,7 +81,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                 <div className='flex flex-col'>
                                 <div className={ (open === 'allergies' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-700 cursor-pointer'} 
                                         onClick={() =>  open === 'allergies' ? setOpen('') : setOpen('allergies')}>
-                                    <div className='font-bold text-normal text-gray-50 font-inter'>Allergies</div>
+                                    <div className='font-bold text-normal text-gray-50 '>Allergies</div>
                                     <div className='flex flex-row items-center justify-center gap-1'>
                                         <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
                                             <div className=' text-white text-sm font-semibold'>2</div>
@@ -101,7 +101,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                 <div>
                                 <div className={ (open === 'diets' ? 'rounded-t-lg': 'rounded-lg') + ' flex flex-row items-center justify-between p-2 bg-gray-700 cursor-pointer'} 
                                         onClick={() =>  open === 'diets' ? setOpen('') : setOpen('diets')}>
-                                    <div className='font-bold text-normal text-gray-50 font-inter'>Diets</div>
+                                    <div className='font-bold text-normal text-gray-50 '>Diets</div>
                                     <div className='flex flex-row items-center justify-center gap-1'>
                                         <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
                                             <div className=' text-white text-sm font-semibold'>2</div>
