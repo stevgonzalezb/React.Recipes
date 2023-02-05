@@ -9,7 +9,10 @@ export default function Recipes({openSidebar}) {
                     <button type="button" className="border-r border-gray-200 px-4 py-2 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
                             onClick={() => openSidebar()}>
                         <span className="sr-only">Open sidebar</span>
-                        <FunnelIcon className="block h-6 w-6"/>
+                        <div className='relative'>
+                            <FunnelIcon className="block h-6 w-6"/>
+                            <div className='h-2 w-2 bg-yellow-600 rounded-full absolute top-0 right-0'></div>
+                        </div>
                     </button>
                     <div className="w-full p-2 text-gray-400 focus-within:text-gray-600 flex gap-4">
                         <div className="pointer-events-none flex items-center justify-center">
