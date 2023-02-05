@@ -1,4 +1,4 @@
-import { XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, ChevronDownIcon, PencilIcon } from '@heroicons/react/24/outline'
 import CheckToggle from "../CheckToggle/CheckToggle"
 
 import Logo from '../../assets/logo-no-background.png'
@@ -13,12 +13,21 @@ const FILTERS = {
 export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {    
 
     const [open, setOpen] = useState('')
-    let [counter, setCounter] = useState(0)
+    let [selection, setSelection] = useState({"Allergies":[], "Diets":[]})
 
-    function handleCounter() {
+    function handleCounter(filter, value) {
+        
+        // Add to array if not exists.
+        if(!selection[filter].includes(value)) selection[filter].push(value)
 
-        setCounter(counter++)
-        return handleSelectFilter
+        // Remove from array if exists.
+        else selection[filter].splice(selection[filter].indexOf(value), 1)
+        
+        // Update state.
+        setSelection(selection)
+        
+        // Return handler to parent layout.
+        return handleSelectFilter(value)
     }
 
     return (
@@ -41,7 +50,9 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                                     <div className='font-bold text-normal text-gray-50 '>{filter}</div>
                                                     <div className='flex flex-row items-center justify-center gap-1'>
                                                         <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
-                                                            <div className=' text-white text-sm font-semibold'>{counter}</div>
+                                                            <div className=' text-white text-sm font-semibold'>
+                                                                { open === filter ? <PencilIcon className='h-3 w-3 text-white' /> : selection[filter].length }
+                                                            </div>
                                                         </div>
                                                         <ChevronDownIcon className='h-4 w-4 text-white' />
                                                     </div>
@@ -49,7 +60,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                                 <div className={(open === filter ? 'flex': 'hidden') + ' rounded-b-lg flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                                     {
                                                         FILTERS[filter].map((value) => (
-                                                            <CheckToggle tittle={value} handleSelectFilter={handleCounter} />
+                                                            <CheckToggle tittle={value} handleSelectFilter={()=> handleCounter(filter, value)} />
                                                         ))
                                                     }
                                                 </div>
@@ -82,7 +93,9 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                                         <div className='font-bold text-normal text-gray-50 '>{filter}</div>
                                                         <div className='flex flex-row items-center justify-center gap-1'>
                                                             <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
-                                                                <div className=' text-white text-sm font-semibold'>2</div>
+                                                                <div className=' text-white text-sm font-semibold'>
+                                                                    { open === filter ? <PencilIcon className='h-3 w-3 text-white' /> : selection[filter].length }
+                                                                </div>
                                                             </div>
                                                             <ChevronDownIcon className='h-4 w-4 text-white' />
                                                         </div>
@@ -90,7 +103,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                                     <div className={(open === filter ? 'flex': 'hidden') + ' rounded-b-lg flex-row gap-2 p-2 flex-wrap bg-gray-100'}>
                                                         {
                                                             FILTERS[filter].map((value) => (
-                                                                <CheckToggle tittle={value} handleSelectFilter={handleSelectFilter} />
+                                                                <CheckToggle tittle={value} handleSelectFilter={()=> handleCounter(filter, value)} />
                                                             ))
                                                         }
                                                     </div>
