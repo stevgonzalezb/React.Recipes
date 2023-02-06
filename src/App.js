@@ -14,7 +14,7 @@ function App() {
     <>
       <div className="flex flex-row">
         <Sidebar closeSidebar={handleMobileSidebar} isOpen={sidebar} handleSelectFilter={handleSelectFilter} />
-        <Recipes openSidebar={handleMobileSidebar} filters={filters} handleAddFilter={handleSelectFilter} />
+        <Recipes openSidebar={handleMobileSidebar} filters={filters.length} handleAddFilter={handleSelectFilter} />
       </div>
     </>
   )
@@ -30,7 +30,9 @@ function App() {
   }
 
   function handleSelectFilter(title) {
-    return title
+    filters.push(title)
+    setFilters(filters)
+    console.log(filters)
   }
 }
 

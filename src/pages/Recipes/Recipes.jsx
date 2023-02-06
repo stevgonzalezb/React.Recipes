@@ -1,10 +1,16 @@
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function Recipes({openSidebar, handleAddFilter}) {
+export default function Recipes({openSidebar, filter, handleAddFilter}) {
 
     let [filters, setFilters] = useState([])
+
+
+    useEffect(() => {
+        console.log("lelele")
+        // check this => https://stackoverflow.com/questions/37009328/re-render-react-component-when-prop-changes
+      }, [filter]);
 
     handleAddFilter = (filter) => {
         console.log("leggoo")
