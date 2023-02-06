@@ -1,12 +1,22 @@
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
 
-export default function Recipes({openSidebar}) {
+import React, { useState } from 'react';
+
+export default function Recipes({openSidebar, handleAddFilter}) {
+
+    let [filters, setFilters] = useState([])
+
+    handleAddFilter = (filter) => {
+        console.log("leggoo")
+        filters.push(filter)
+        setFilters(filters)
+    }
     
     return (
         <> 
             <div className="flex flex-1 flex-col">
                 <div className="sticky top-0 z-10 flex py-4 flex-shrink-0 bg-white shadow">
-                    <button type="button" className="border-r border-gray-200 px-4 py-2 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
+                    <button type="button" className="sm:hidden border-r border-gray-200 px-4 py-2 text-gray-500"
                             onClick={() => openSidebar()}>
                         <span className="sr-only">Open sidebar</span>
                         <div className='relative'>
@@ -25,8 +35,19 @@ export default function Recipes({openSidebar}) {
                 <main className="flex-1 pt-4 px-4">
                     <div className="max-w-7xl">
                     <div className="flex flex-col gap-2">
-                            <h1 className="text-2xl font-semibold text-gray-900">Content</h1>
-                            <div className="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
+                            <h1 className="text-2xl font-semibold text-gray-900">Filters</h1>
+                            <div className="h-96 rounded-lg border-4 border-dashed border-gray-200">
+                                {
+                                    // console.log(filters)
+                                    filters.map((value) => {
+                                        return (
+                                            <div className='text-red-500'>
+                                                {value}
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
                 </main>

@@ -8,12 +8,13 @@ function App() {
 
   // Mobile Sidebar flag.
   const [sidebar, setSidebar] = useState(false)
+  let [filters, setFilters] = useState(['Crustacean-free'])
 
   return (
     <>
       <div className="flex flex-row">
         <Sidebar closeSidebar={handleMobileSidebar} isOpen={sidebar} handleSelectFilter={handleSelectFilter} />
-        <Recipes openSidebar={handleMobileSidebar} />
+        <Recipes openSidebar={handleMobileSidebar} filters={filters} handleAddFilter={handleSelectFilter} />
       </div>
     </>
   )
@@ -29,7 +30,7 @@ function App() {
   }
 
   function handleSelectFilter(title) {
-    console.log(title)
+    return title
   }
 }
 
