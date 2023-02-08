@@ -1,4 +1,4 @@
-import { XMarkIcon, ChevronDownIcon, PencilIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, ChevronDownIcon, PencilIcon, FunnelIcon } from '@heroicons/react/24/outline'
 import CheckToggle from "../CheckToggle/CheckToggle"
 
 import Logo from '../../assets/logo-no-background.png'
@@ -49,9 +49,9 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
                                                         onClick={() =>  open === filter ? setOpen('') : setOpen(filter)}>
                                                     <div className='font-bold text-normal text-gray-50 '>{filter}</div>
                                                     <div className='flex flex-row items-center justify-center gap-1'>
-                                                        <div className='bg-yellow-600 rounded-full h-5 w-5 flex items-center justify-center'>
+                                                        <div className=' h-5 w-5 flex items-center justify-center'>
                                                             <div className=' text-white text-sm font-semibold'>
-                                                                { open === filter ? <PencilIcon className='h-3 w-3 text-white' /> : selection[filter].length }
+                                                                <FunnelIcon className='h-3 w-3 text-white'/> 
                                                             </div>
                                                         </div>
                                                         <ChevronDownIcon className='h-4 w-4 text-white' />
