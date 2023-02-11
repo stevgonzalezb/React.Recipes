@@ -2,21 +2,22 @@ import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
 
 import React, { useState, useEffect } from 'react';
 
-export default function Recipes({openSidebar, filter, handleAddFilter}) {
+export default function Recipes({openSidebar, filters, handleAddFilter, counter}) {
 
-    let [filters, setFilters] = useState([])
+    // let [filters, setFilters] = useState([])
 
 
     useEffect(() => {
         console.log("lelele")
         // check this => https://stackoverflow.com/questions/37009328/re-render-react-component-when-prop-changes
-      }, [filter]);
+      }, [counter]);
+      console.log("🚀 ~ Recipes ~ filters", filters)
 
-    handleAddFilter = (filter) => {
-        console.log("leggoo")
-        filters.push(filter)
-        setFilters(filters)
-    }
+    // handleAddFilter = (filter) => {
+    //     console.log("leggoo")
+    //     filters.push(filter)
+    //     setFilters(filters)
+    // }
     
     return (
         <> 
@@ -42,17 +43,12 @@ export default function Recipes({openSidebar, filter, handleAddFilter}) {
                     <div className="max-w-7xl">
                     <div className="flex flex-col gap-2">
                             <h1 className="text-2xl font-semibold text-gray-900">Filters</h1>
-                            <div className="h-96 rounded-lg border-4 border-dashed border-gray-200">
-                                {
-                                    // console.log(filters)
-                                    filters.map((value) => {
-                                        return (
-                                            <div className='text-red-500'>
-                                                {value}
-                                            </div>
-                                        )
-                                    })
-                                }
+                            <div key={filters.length} className="h-96 rounded-lg border-4 border-dashed border-gray-200">
+                            <div className='text-red-500'>
+                                                 {counter}
+                                         </div>
+                                
+                                
                             </div>
                         </div>
                     </div>

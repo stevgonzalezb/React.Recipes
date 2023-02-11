@@ -33,7 +33,7 @@ export default function Sidebar({ closeSidebar, isOpen, handleSelectFilter}) {
     return (
         <> 
             <div className='flex flex-row bg-gray-200'>
-                <div className="h-screen p-2 border-r border-gray-400 sm:flex w-72 hidden">
+                <div className="h-screen p-2 border-r border-gray-400 sm:flex w-72 hidden select-none">
                     <div className="flex flex-grow flex-col gap-4 overflow-y-auto bg-gray-200">
                         <div className="flex flex-shrink-0 justify-center items-center ">
                             <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
