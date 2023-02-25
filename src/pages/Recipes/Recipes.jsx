@@ -16,7 +16,7 @@ export default function Recipes() {
                     </div>
 
                     <div className="w-full py-2 px-4 text-gray-400 focus-within:text-gray-600 flex flex-row justify-between gap-4">
-                        <div className="pointer-events-none hidden sm:block">
+                        <div className="pointer-events-none hidden sm:flex items-center">
                             <MagnifyingGlassIcon className="h-8 w-8 text-gray-600"/>
                         </div>
                         <input autoFocus 
