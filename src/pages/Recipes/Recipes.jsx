@@ -10,13 +10,14 @@ export default function Recipes() {
     return (
         <> 
             <div className="flex flex-1 flex-col">
-                <div className="sticky top-0 z-10 flex py-2 flex-shrink-0 bg-gray-100 divide-x-2 shadow-lg">
+                <div className="sticky top-0 z-10 sm:flex-row flex-col flex py-2 flex-shrink-0 bg-gray-100 divide-x-2 shadow-lg">
                     <div className="flex flex-shrink-0 justify-center items-center py-2 px-4">
                         <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
                     </div>
-                    <div className="w-full py-2 px-4 text-gray-400 focus-within:text-gray-600 flex gap-4">
-                        <div className="pointer-events-none flex items-center justify-center">
-                            <MagnifyingGlassIcon className="block h-8 w-8 text-gray-600"/>
+
+                    <div className="w-full py-2 px-4 text-gray-400 focus-within:text-gray-600 flex flex-row justify-between gap-4">
+                        <div className="pointer-events-none hidden sm:block">
+                            <MagnifyingGlassIcon className="h-8 w-8 text-gray-600"/>
                         </div>
                         <input autoFocus 
                             id="search-field" 
