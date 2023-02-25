@@ -1,4 +1,5 @@
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
+import LogoBlack from '../../assets/logo-black.png'
 import Logo from '../../assets/logo-no-background.png'
 
 import React, { useState, useEffect } from 'react';
@@ -9,8 +10,8 @@ export default function Recipes() {
     
     return (
         <> 
-            <div className="flex flex-1 flex-col">
-                <div className="sticky top-0 z-10 sm:flex-row flex-col flex py-2 flex-shrink-0 bg-gray-100 divide-x-2 shadow-lg">
+            <div className="flex flex-col w-full h-screen">
+                <div className="sticky w-full top-0 z-10 sm:flex-row flex-col flex py-2 bg-gray-100 divide-x-2 shadow-lg">
                     <div className="flex flex-shrink-0 justify-center items-center py-2 px-4">
                         <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
                     </div>
@@ -34,11 +35,22 @@ export default function Recipes() {
                     </div>
                 </div>
 
-                <main className="flex-1 pt-4 px-4">
-                    <div className="max-w-7xl">
-                    <div className="flex flex-col gap-2">
-                        {keyworkds}
-                    </div>
+                <main className="w-full h-[calc(100vh_-_136px)] sm:h-[calc(100vh_-_80px)] p-2 overflow-auto">
+                    <div className="max-w-7xl h-full">
+                        {/* Empty state */}
+                        <div className='h-full w-full flex flex-col gap-2 justify-center items-center'>
+                            <img className="grayscale  h-40 w-auto opacity-60" src={LogoBlack} alt="Cookify "/>
+
+                            <div className="text-2xl font-bangers text-gray-700 text-center">
+                                No value entered yet, <br />
+                                how about starting with a teriyaki chicken? 🍗
+                            </div>
+                        </div>
+
+                        {/* Query results */}
+                        <div className={keyworkds ? 'flex': 'hidden'}>
+                            Resultados para: {keyworkds}
+                        </div>
                     </div>
                 </main>
             </div>   

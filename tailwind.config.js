@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      'bangers': ['Bangers', 'sans-serif'],
       'inter': ['Inter var'],
       'open-sans': ['Open Sans', 'sans-serif'],
     },
