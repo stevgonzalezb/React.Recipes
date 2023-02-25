@@ -1,34 +1,43 @@
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
+import Logo from '../../assets/logo-no-background.png'
 
 import React, { useState, useEffect } from 'react';
 
 export default function Recipes() {
+
+    const [keyworkds, setKeyworkds] = useState('')
     
     return (
         <> 
             <div className="flex flex-1 flex-col">
-                <div className="sticky top-0 z-10 flex py-4 flex-shrink-0 bg-white shadow">
-                    {/* <button type="button" className="hidden border-r border-gray-200 px-4 py-2 text-gray-500"
-                            onClick={() => console.log("not implemented")}>
-                        <span className="sr-only">Open sidebar</span>
-                        <div className='relative'>
-                            <FunnelIcon className="block h-6 w-6"/>
-                            <div className='h-2 w-2 bg-yellow-600 rounded-full absolute top-0 right-0'></div>
-                        </div>
-                    </button> */}
-                    <div className="w-full p-2 text-gray-400 focus-within:text-gray-600 flex gap-4">
+                <div className="sticky top-0 z-10 flex py-2 flex-shrink-0 bg-gray-100 divide-x-2 shadow-lg">
+                    <div className="flex flex-shrink-0 justify-center items-center py-2 px-4">
+                        <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
+                    </div>
+                    <div className="w-full py-2 px-4 text-gray-400 focus-within:text-gray-600 flex gap-4">
                         <div className="pointer-events-none flex items-center justify-center">
-                            <MagnifyingGlassIcon className="block h-6 w-6"/>
+                            <MagnifyingGlassIcon className="block h-8 w-8 text-gray-600"/>
                         </div>
-                        <input id="search-field" className=" h-full w-full border-transparent text-gray-900 placeholder-gray-500 focus:border-transparent focus:placeholder-gray-400 focus:outline-none focus:ring-0" placeholder="Search" type="search" name="search"/>
+                        <input autoFocus 
+                            id="search-field" 
+                            className="h-full w-full text-lg font-medium border rounded-md border-gray-400 text-gray-900 placeholder-gray-400 focus:border-gray-400 outline-none focus:ring-1"
+                            placeholder="Type one o more keywords"
+                            onKeyDown={(e) => { 
+                                if(e.key === 'Enter') setKeyworkds()
+                            }}
+                            onInput={(e) => {setKeyworkds(e.target.value)}}/>
+                        <button className='text-white font-medium hover:bg-green-800 bg-green-cookify p-2 rounded-md'
+                                onClick={() => setKeyworkds()}>
+                            Search
+                        </button>
                     </div>
                 </div>
 
                 <main className="flex-1 pt-4 px-4">
                     <div className="max-w-7xl">
                     <div className="flex flex-col gap-2">
-                            <h1 className="text-2xl font-semibold text-gray-900">Recipes</h1>
-                        </div>
+                        {keyworkds}
+                    </div>
                     </div>
                 </main>
             </div>   
