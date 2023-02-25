@@ -1,12 +1,37 @@
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
 import LogoBlack from '../../assets/logo-black.png'
 import Logo from '../../assets/logo-no-background.png'
+import Recipe from "../../components/Recipe/Recipe"
 
 import React, { useState, useEffect } from 'react';
+import * as RecipeService from "../../services/recipes"
 
 export default function Recipes() {
 
-    const [keyworkds, setKeyworkds] = useState('')
+    const [recipes, setRecipes] = useState([]);
+    const [query, setQuery] = useState('')
+
+    async function handleSearch() {
+        
+        // Validate required paarams.
+        if (!query) {
+            setRecipes([])
+            return
+        }
+        
+        // Get recipes.
+        let recipes = await RecipeService.getMockRecipes(query) // MOCK
+
+        // Handle api exception.
+        if (recipes === null) {
+            setRecipes([])
+            alert("not handled exception") //TODO
+            return
+        }
+
+        // Update recipe list.
+        setRecipes(recipes.hits)
+    }
     
     return (
         <> 
@@ -25,11 +50,11 @@ export default function Recipes() {
                             className="h-full w-full text-lg font-medium border rounded-md border-gray-400 text-gray-900 placeholder-gray-400 focus:border-gray-400 outline-none focus:ring-1"
                             placeholder="Type one o more keywords"
                             onKeyDown={(e) => { 
-                                if(e.key === 'Enter') setKeyworkds()
+                                if(e.key === 'Enter') handleSearch()
                             }}
-                            onInput={(e) => {setKeyworkds(e.target.value)}}/>
+                            onInput={(e) => {setQuery(e.target.value)}}/>
                         <button className='text-white font-medium hover:bg-green-800 bg-green-cookify p-2 rounded-md'
-                                onClick={() => setKeyworkds()}>
+                                onClick={() => handleSearch()}>
                             Search
                         </button>
                     </div>
@@ -38,7 +63,7 @@ export default function Recipes() {
                 <main className="w-full h-[calc(100vh_-_136px)] sm:h-[calc(100vh_-_80px)] p-2 overflow-auto">
                     <div className="max-w-7xl h-full">
                         {/* Empty state */}
-                        <div className='h-full w-full flex flex-col gap-2 justify-center items-center'>
+                        <div className={(recipes.length === 0 ? 'flex': 'hidden')+ ' h-full w-full flex-col gap-2 justify-center items-center'}>
                             <img className="grayscale  h-40 w-auto opacity-60" src={LogoBlack} alt="Cookify "/>
 
                             <div className="text-2xl font-bangers text-gray-700 text-center">
@@ -48,8 +73,19 @@ export default function Recipes() {
                         </div>
 
                         {/* Query results */}
-                        <div className={keyworkds ? 'flex': 'hidden'}>
-                            Resultados para: {keyworkds}
+                        <div className={recipes.length !== 0 ? 'flex': 'hidden'}>
+
+                            <div className='flex flex-wrap'>
+                                {recipes.map(recipe => (
+                                    <Recipe 
+                                    key={recipe.recipe.label}
+                                    title={recipe.recipe.label} 
+                                    calories={recipe.recipe.calories} 
+                                    image={recipe.recipe.image}
+                                    ingredients={recipe.recipe.ingredients} />
+                                ))}
+                            </div>
+                            
                         </div>
                     </div>
                 </main>
