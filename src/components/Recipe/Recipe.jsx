@@ -1,0 +1,53 @@
+import React from "react"
+
+const Recipe = ({healthLabels, title, calories, image, ingredients, servings}) => {
+    return(
+        <div className="flex flex-col min-w-[300px] max-w-[600px] bg-gray-100 shadow-md rounded-md border">
+            <div className="flex flex-col sm:flex-row p-2 gap-2">
+                <img className="h-36 sm:w-36 rounded-md" src={image} alt=""/>
+
+                <div className="w-full flex flex-col gap-2">
+                    <div className="overflow-hidden sm:whitespace-nowrap max-w-[400px] font-extrabold text-gray-900 text-ellipsis">{title}</div>
+
+                    <div className="divide-y-2 divide-green-cookify">
+                        <div className="flex flex-wrap gap-1 py-1">
+                            {healthLabels.map(label => (
+                                <p className="text-xs font-medium text-gray-600 leading-4"> • {label}</p>
+                            ))}
+                        </div>
+                        <div className="flex gap-4 py-1">
+                            <div className="flex justify-center items-center gap-1">
+                                <div className="w-2 h-2 rounded-full bg-lime-600"></div>
+                                <div className="text-gray-900 text-sm font-medium ">
+                                    {parseInt(servings)} Servings
+                                </div>
+                            </div>
+                            <div className="flex justify-center items-center gap-1">
+                                <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                <div className="text-gray-900 text-sm font-medium ">
+                                    {(parseInt(calories) / parseInt(servings)).toFixed()} calories per serving
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                        {/* <h1>{title}</h1>
+            <ol>
+                {ingredients.map(ingredient => (
+                    <li>{ingredient.text}</li>
+                ))}
+            </ol>
+            <p>{calories}</p>
+            <img className="" src={image} alt=""/> */}
+        </div>
+
+
+
+    )
+}
+
+export default Recipe

@@ -14,7 +14,7 @@ export async function getRecipes(query) {
 export async function getMockRecipes(query) {
 
     return {
-        "q": query,
+        "q": "carne de porco",
         "from": 0,
         "to": 10,
         "more": false,
@@ -24,7 +24,7 @@ export async function getMockRecipes(query) {
                 "recipe": {
                     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_504e4249ad120dda88453277cdd33f7e",
                     "label": "Carne de Porco à Alentejana",
-                    "image": "https://edamam-product-images.s3.amazonaws.com/web-img/383/38369d17a0b3be6412162e6d197e1bda.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFbTvBCBNt9JdjU%2FOx4wXqe8T8ZAFThz8w1LboWgQUJ%2BAiEA9hEyvekiZ9Y8p%2FVoFDd07o6ToYLLjEhXkPNeRanRgoYquAUINhAAGgwxODcwMTcxNTA5ODYiDLHzC%2FEpo83qcWJ8qiqVBX7u6cv1nzGJtRac9ageqsUNji%2F6TH3nwlK162L8KjY0mLBYxY9t2BqnLuQ57XVkin%2F5OUJ8vNlGSu2NrUMDXW58PTo1%2FPFYpjfGqbu9VF0fLGBrKED7vOAWyzEuib0j4eTSI%2Bi6Gw8AruptCVqIF72tjE6n4vFe6FVxPYlpGZB60q1b6dZnsmJRVzGbTO3yvVc47j0cW%2B8Kg0A4EvHw5J5xJcCXCOWOEXYOPnNqxNZpBBvfBIhn3HzvDiijD53xEI8Li2E0dhGmzGzicEWbJth5OB%2FxulPjaouhMYfXoGuczvj0ahqZlq39DZn2BHfLtsX35X0c2%2FxQbieUzkHJJbWYtughwA2HVnDUCMJh%2BPu3EcgJOtUObRMBJ2EI0CKT5GTowkvxIlNPbogVKvxGaVxpJfrO5H%2FfROMMvYUsPSm7A2OBfqLHoULCoFfkPX2Hel5Gb1dd43A%2FgANO45wWSj2tBhwXtyrZFkDuueY8E9tATVEy5C5JrwdgjxPquLaMULjjxkOoORyxRpjS5snJa33RjyUya15OKoI2YQ8Sor9uxcXBVHbdyHwztTujlx54lSD2DV1jCGtOVKhslQPhVn50Pk8qydAtKyGUHCOS86DwsjZPFen5YTgaWBD8PqBG1vEgWwQFTCO1kH4idnHzLZDR%2BhdDbJwCg8%2FzzKw%2BHnQ9WmIG1DBmPzmt%2FxJT662Oc4%2BYR7ZOJ9D9OAda8KJHDkhjTO9EeK6Z7vqv2MHnTa6C9lCWNO1XL%2FGSdWQgACXYEuYnZSAuOog7WFDgnngXR3mE42zMWtfCyLoN%2FkfBwJm3qepgjRwsIWlxFyzpfvdp5MrK8ynkArdF2mAj9H61FLsMXDq%2BsiSG9maTIB6IlaMkTonqb9AwwvLpnwY6sQFu4RFbWwFY0ncvEMRsB7iq1d%2Beefv8fowAosQ3pB%2BjDiCoIZnY6yPS%2Bx%2BD55XaOSiGKW71tjHLOQBAKol64vrIcSVITlOYhlg6dwX9vhDvGxPDDOevuxNFxFSw4n5DI%2FYz6RQUnRkw1%2FNd5tamTqTnX%2FMlv1f7Vy0h73F%2B2fKO5Eh73DvujnoaiW%2FrQ4x6fW%2FMcEg7hxNCZaM6xWEpkzwoVfebav2rbz2E5DoRzWT87Rw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230225T221511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFKALR3RVZ%2F20230225%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9569293a2bd7c5bfbd51ef92d380e5cb604d5d871c228a588cb76a04e7d0c1b8",
+                    "image": "https://picsum.photos/800/600",
                     "source": "Honest Cooking",
                     "url": "http://honestcooking.com/carne-de-porco-a-alentejana/",
                     "shareAs": "http://www.edamam.com/recipe/carne-de-porco-%C3%A0-alentejana-504e4249ad120dda88453277cdd33f7e/carne+de+porco",
@@ -80,7 +80,7 @@ export async function getMockRecipes(query) {
                             "weight": 10.2,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 cloves garlic, crushed and minced",
@@ -90,7 +90,7 @@ export async function getMockRecipes(query) {
                             "weight": 6.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_avtcmx6bgjv1jvay6s6stan8dnyp",
-                            "image": "https://www.edamam.com/food-img/6ee/6ee142951f48aaf94f4312409f8d133d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 tablespoon olive oil",
@@ -100,7 +100,7 @@ export async function getMockRecipes(query) {
                             "weight": 13.5,
                             "foodCategory": "Oils",
                             "foodId": "food_b1d1icuad3iktrbqby0hiagafaz7",
-                            "image": "https://www.edamam.com/food-img/4d6/4d651eaa8a353647746290c7a9b29d84.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Pinch of salt",
@@ -110,7 +110,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.380208333815447,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2¼lbs (1 kg) boneless pork loin, cubed",
@@ -120,7 +120,7 @@ export async function getMockRecipes(query) {
                             "weight": 1020.5828325,
                             "foodCategory": "meats",
                             "foodId": "food_avagutpasew697bkpd0ylbp099n9",
-                            "image": "https://www.edamam.com/food-img/239/2398e80abd77c81317eb3dd2311b00ae.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "½ cup white wine vinegar",
@@ -130,7 +130,7 @@ export async function getMockRecipes(query) {
                             "weight": 119.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_ai77igmb8f0rj6blsokr8bxx5n2n",
-                            "image": "https://www.edamam.com/food-img/5f6/5f69b84c399d778c4728e9ab4f8065a2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 bay leaves",
@@ -140,7 +140,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.2,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_asx39x4ayja4jab6ivj6zayvkblo",
-                            "image": "https://www.edamam.com/food-img/0f9/0f9f5f95df173e9ffaaff2977bef88f3.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 tablespoons olive oil",
@@ -150,7 +150,7 @@ export async function getMockRecipes(query) {
                             "weight": 27.0,
                             "foodCategory": "Oils",
                             "foodId": "food_b1d1icuad3iktrbqby0hiagafaz7",
-                            "image": "https://www.edamam.com/food-img/4d6/4d651eaa8a353647746290c7a9b29d84.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 garlic cloves, minced",
@@ -160,7 +160,7 @@ export async function getMockRecipes(query) {
                             "weight": 9.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_avtcmx6bgjv1jvay6s6stan8dnyp",
-                            "image": "https://www.edamam.com/food-img/6ee/6ee142951f48aaf94f4312409f8d133d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 onion, chopped",
@@ -170,7 +170,7 @@ export async function getMockRecipes(query) {
                             "weight": 125.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_bmrvi4ob4binw9a5m7l07amlfcoy",
-                            "image": "https://www.edamam.com/food-img/205/205e6bf2399b85d34741892ef91cc603.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2-3 tablespoons tomato paste",
@@ -180,7 +180,7 @@ export async function getMockRecipes(query) {
                             "weight": 40.0,
                             "foodCategory": "canned vegetables",
                             "foodId": "food_auu2atfal07b6gbd1a5wsawy7u0s",
-                            "image": "https://www.edamam.com/food-img/aef/aef4e029118da71388e526086506053a.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 cup white wine",
@@ -190,7 +190,7 @@ export async function getMockRecipes(query) {
                             "weight": 235.2,
                             "foodCategory": "wines",
                             "foodId": "food_bn44h7baron9ufaoxinmya8l0yye",
-                            "image": "https://www.edamam.com/food-img/a71/a718cf3c52add522128929f1f324d2ab.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 ¼ lbs (1 kg) clams, scrubbed clean",
@@ -200,7 +200,7 @@ export async function getMockRecipes(query) {
                             "weight": 1020.5828325,
                             "foodCategory": "seafood",
                             "foodId": "food_b12syzgajx227eahiup7wb240d41",
-                            "image": "https://www.edamam.com/food-img/cdb/cdb6d4a1acc0b81c643ba1a52c5cd95b.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 large potatoes, peeled",
@@ -210,7 +210,7 @@ export async function getMockRecipes(query) {
                             "weight": 1107.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_abiw5baauresjmb6xpap2bg3otzu",
-                            "image": "https://www.edamam.com/food-img/651/6512e82417bce15c2899630c1a2799df.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 tablespoons olive oil",
@@ -220,7 +220,7 @@ export async function getMockRecipes(query) {
                             "weight": 40.5,
                             "foodCategory": "Oils",
                             "foodId": "food_b1d1icuad3iktrbqby0hiagafaz7",
-                            "image": "https://www.edamam.com/food-img/4d6/4d651eaa8a353647746290c7a9b29d84.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Salt",
@@ -230,7 +230,7 @@ export async function getMockRecipes(query) {
                             "weight": 23.000675240002895,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Water",
@@ -240,7 +240,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.0,
                             "foodCategory": "water",
                             "foodId": "food_a99vzubbk1ayrsad318rvbzr3dh0",
-                            "image": "https://www.edamam.com/food-img/5dd/5dd9d1361847b2ca53c4b19a8f92627e.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 lemon, sliced into wedges (optional)",
@@ -250,7 +250,7 @@ export async function getMockRecipes(query) {
                             "weight": 58.0,
                             "foodCategory": "fruit",
                             "foodId": "food_a6uzc62astrxcgbtzyq59b6fncrr",
-                            "image": "https://www.edamam.com/food-img/70a/70acba3d4c734d7c70ef4efeed85dc8f.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Cilantro/coriander leaves (optional)",
@@ -260,7 +260,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.3,
                             "foodCategory": "vegetables",
                             "foodId": "food_alhzhuwb4lc7jnb5s6f02by60bzp",
-                            "image": "https://www.edamam.com/food-img/d57/d57e375b6ff99a90c7ee2b1990a1af36.jpg"
+                            "image": "https://picsum.photos/400/400"
                         }
                     ],
                     "calories": 4509.141737900001,
@@ -897,7 +897,7 @@ export async function getMockRecipes(query) {
                 "recipe": {
                     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_6cf986c50a054718abe09f443890c1e0",
                     "label": "Carne de Porco Alentejana - Pork Fillet Alentejo Style (Portugal)",
-                    "image": "https://edamam-product-images.s3.amazonaws.com/web-img/633/633ba99893f036dd644761887ba148a6.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFbTvBCBNt9JdjU%2FOx4wXqe8T8ZAFThz8w1LboWgQUJ%2BAiEA9hEyvekiZ9Y8p%2FVoFDd07o6ToYLLjEhXkPNeRanRgoYquAUINhAAGgwxODcwMTcxNTA5ODYiDLHzC%2FEpo83qcWJ8qiqVBX7u6cv1nzGJtRac9ageqsUNji%2F6TH3nwlK162L8KjY0mLBYxY9t2BqnLuQ57XVkin%2F5OUJ8vNlGSu2NrUMDXW58PTo1%2FPFYpjfGqbu9VF0fLGBrKED7vOAWyzEuib0j4eTSI%2Bi6Gw8AruptCVqIF72tjE6n4vFe6FVxPYlpGZB60q1b6dZnsmJRVzGbTO3yvVc47j0cW%2B8Kg0A4EvHw5J5xJcCXCOWOEXYOPnNqxNZpBBvfBIhn3HzvDiijD53xEI8Li2E0dhGmzGzicEWbJth5OB%2FxulPjaouhMYfXoGuczvj0ahqZlq39DZn2BHfLtsX35X0c2%2FxQbieUzkHJJbWYtughwA2HVnDUCMJh%2BPu3EcgJOtUObRMBJ2EI0CKT5GTowkvxIlNPbogVKvxGaVxpJfrO5H%2FfROMMvYUsPSm7A2OBfqLHoULCoFfkPX2Hel5Gb1dd43A%2FgANO45wWSj2tBhwXtyrZFkDuueY8E9tATVEy5C5JrwdgjxPquLaMULjjxkOoORyxRpjS5snJa33RjyUya15OKoI2YQ8Sor9uxcXBVHbdyHwztTujlx54lSD2DV1jCGtOVKhslQPhVn50Pk8qydAtKyGUHCOS86DwsjZPFen5YTgaWBD8PqBG1vEgWwQFTCO1kH4idnHzLZDR%2BhdDbJwCg8%2FzzKw%2BHnQ9WmIG1DBmPzmt%2FxJT662Oc4%2BYR7ZOJ9D9OAda8KJHDkhjTO9EeK6Z7vqv2MHnTa6C9lCWNO1XL%2FGSdWQgACXYEuYnZSAuOog7WFDgnngXR3mE42zMWtfCyLoN%2FkfBwJm3qepgjRwsIWlxFyzpfvdp5MrK8ynkArdF2mAj9H61FLsMXDq%2BsiSG9maTIB6IlaMkTonqb9AwwvLpnwY6sQFu4RFbWwFY0ncvEMRsB7iq1d%2Beefv8fowAosQ3pB%2BjDiCoIZnY6yPS%2Bx%2BD55XaOSiGKW71tjHLOQBAKol64vrIcSVITlOYhlg6dwX9vhDvGxPDDOevuxNFxFSw4n5DI%2FYz6RQUnRkw1%2FNd5tamTqTnX%2FMlv1f7Vy0h73F%2B2fKO5Eh73DvujnoaiW%2FrQ4x6fW%2FMcEg7hxNCZaM6xWEpkzwoVfebav2rbz2E5DoRzWT87Rw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230225T221511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFKALR3RVZ%2F20230225%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=625420ca1b37bcaf0615c7269c5c6f927de6d2537eb2966de0a62a960d418f45",
+                    "image": "https://picsum.photos/800/600",
                     "source": "Food52",
                     "url": "https://food52.com/recipes/795-carne-de-porco-alentejana-pork-fillet-alentejo-style-portugal",
                     "shareAs": "http://www.edamam.com/recipe/carne-de-porco-alentejana-pork-fillet-alentejo-style-portugal-6cf986c50a054718abe09f443890c1e0/carne+de+porco",
@@ -942,7 +942,7 @@ export async function getMockRecipes(query) {
                             "weight": 907.18474,
                             "foodCategory": "meats",
                             "foodId": "food_aisetlvawqaqp8a2uc28uaf46l5m",
-                            "image": "https://www.edamam.com/food-img/d55/d553f23d42b9c8fb314416ccd5cde3d2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 tablespoon paprika, sweet or spanish smoked paprika",
@@ -952,7 +952,7 @@ export async function getMockRecipes(query) {
                             "weight": 6.8,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1/4 cup white wine",
@@ -962,7 +962,7 @@ export async function getMockRecipes(query) {
                             "weight": 58.8,
                             "foodCategory": "wines",
                             "foodId": "food_bn44h7baron9ufaoxinmya8l0yye",
-                            "image": "https://www.edamam.com/food-img/a71/a718cf3c52add522128929f1f324d2ab.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Salt",
@@ -972,7 +972,7 @@ export async function getMockRecipes(query) {
                             "weight": 11.68901688,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "4 garlic cloves",
@@ -982,7 +982,7 @@ export async function getMockRecipes(query) {
                             "weight": 12.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_avtcmx6bgjv1jvay6s6stan8dnyp",
-                            "image": "https://www.edamam.com/food-img/6ee/6ee142951f48aaf94f4312409f8d133d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "4 tablespoons rendered lard (or extra virgin olive oil but it won't taste the same!)",
@@ -992,7 +992,7 @@ export async function getMockRecipes(query) {
                             "weight": 51.2,
                             "foodCategory": "Oils",
                             "foodId": "food_bq8ww91a79r6zrbzro0naaor0fa3",
-                            "image": "https://www.edamam.com/food-img/bc2/bc208be87a2eb48178d8a55ee5fd8e7d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 tablespoon coriander - fresh leaves chopped",
@@ -1002,7 +1002,7 @@ export async function getMockRecipes(query) {
                             "weight": 5.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_afpcy6rb44nx6gbfff63ga2cqksw",
-                            "image": "https://www.edamam.com/food-img/a90/a901cee0b9028841d258f5d07b5924e7.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 pounds clams, very fresh",
@@ -1012,7 +1012,7 @@ export async function getMockRecipes(query) {
                             "weight": 907.18474,
                             "foodCategory": "seafood",
                             "foodId": "food_b12syzgajx227eahiup7wb240d41",
-                            "image": "https://www.edamam.com/food-img/cdb/cdb6d4a1acc0b81c643ba1a52c5cd95b.jpg"
+                            "image": "https://picsum.photos/400/400"
                         }
                     ],
                     "calories": 3138.4006616000006,
@@ -1649,7 +1649,7 @@ export async function getMockRecipes(query) {
                 "recipe": {
                     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_22dfff3a84757e3a1d8cf01d9505d617",
                     "label": "Carne de Porco à Alentejana",
-                    "image": "https://edamam-product-images.s3.amazonaws.com/web-img/376/376aa2d535b88c19bc3d3af70e1912fa.JPG?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFbTvBCBNt9JdjU%2FOx4wXqe8T8ZAFThz8w1LboWgQUJ%2BAiEA9hEyvekiZ9Y8p%2FVoFDd07o6ToYLLjEhXkPNeRanRgoYquAUINhAAGgwxODcwMTcxNTA5ODYiDLHzC%2FEpo83qcWJ8qiqVBX7u6cv1nzGJtRac9ageqsUNji%2F6TH3nwlK162L8KjY0mLBYxY9t2BqnLuQ57XVkin%2F5OUJ8vNlGSu2NrUMDXW58PTo1%2FPFYpjfGqbu9VF0fLGBrKED7vOAWyzEuib0j4eTSI%2Bi6Gw8AruptCVqIF72tjE6n4vFe6FVxPYlpGZB60q1b6dZnsmJRVzGbTO3yvVc47j0cW%2B8Kg0A4EvHw5J5xJcCXCOWOEXYOPnNqxNZpBBvfBIhn3HzvDiijD53xEI8Li2E0dhGmzGzicEWbJth5OB%2FxulPjaouhMYfXoGuczvj0ahqZlq39DZn2BHfLtsX35X0c2%2FxQbieUzkHJJbWYtughwA2HVnDUCMJh%2BPu3EcgJOtUObRMBJ2EI0CKT5GTowkvxIlNPbogVKvxGaVxpJfrO5H%2FfROMMvYUsPSm7A2OBfqLHoULCoFfkPX2Hel5Gb1dd43A%2FgANO45wWSj2tBhwXtyrZFkDuueY8E9tATVEy5C5JrwdgjxPquLaMULjjxkOoORyxRpjS5snJa33RjyUya15OKoI2YQ8Sor9uxcXBVHbdyHwztTujlx54lSD2DV1jCGtOVKhslQPhVn50Pk8qydAtKyGUHCOS86DwsjZPFen5YTgaWBD8PqBG1vEgWwQFTCO1kH4idnHzLZDR%2BhdDbJwCg8%2FzzKw%2BHnQ9WmIG1DBmPzmt%2FxJT662Oc4%2BYR7ZOJ9D9OAda8KJHDkhjTO9EeK6Z7vqv2MHnTa6C9lCWNO1XL%2FGSdWQgACXYEuYnZSAuOog7WFDgnngXR3mE42zMWtfCyLoN%2FkfBwJm3qepgjRwsIWlxFyzpfvdp5MrK8ynkArdF2mAj9H61FLsMXDq%2BsiSG9maTIB6IlaMkTonqb9AwwvLpnwY6sQFu4RFbWwFY0ncvEMRsB7iq1d%2Beefv8fowAosQ3pB%2BjDiCoIZnY6yPS%2Bx%2BD55XaOSiGKW71tjHLOQBAKol64vrIcSVITlOYhlg6dwX9vhDvGxPDDOevuxNFxFSw4n5DI%2FYz6RQUnRkw1%2FNd5tamTqTnX%2FMlv1f7Vy0h73F%2B2fKO5Eh73DvujnoaiW%2FrQ4x6fW%2FMcEg7hxNCZaM6xWEpkzwoVfebav2rbz2E5DoRzWT87Rw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230225T221511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=ASIASXCYXIIFKALR3RVZ%2F20230225%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d9fb7f0a7fba2a80bb120f58b17bcac63c85075a8321b6cd3ddf2b7c47c955ff",
+                    "image": "https://picsum.photos/800/600",
                     "source": "culinary-adventures-with-cam.blogspot.com",
                     "url": "http://culinary-adventures-with-cam.blogspot.com/2017/03/carne-de-porco-alentejana-foodnflix.html",
                     "shareAs": "http://www.edamam.com/recipe/carne-de-porco-%C3%A0-alentejana-22dfff3a84757e3a1d8cf01d9505d617/carne+de+porco",
@@ -1705,7 +1705,7 @@ export async function getMockRecipes(query) {
                             "weight": 2.3,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 T sweet paprika",
@@ -1715,7 +1715,7 @@ export async function getMockRecipes(query) {
                             "weight": 4.6,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 t hot paprika",
@@ -1725,7 +1725,7 @@ export async function getMockRecipes(query) {
                             "weight": 2.3,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 t ground turmeric",
@@ -1735,7 +1735,7 @@ export async function getMockRecipes(query) {
                             "weight": 3.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_bc3ig84amucgmwba3vixyatnyd9b",
-                            "image": "https://www.edamam.com/food-img/03e/03eb469286b3caf1ae9c13e4eba13587.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 pounds boneless pork loin, cubed",
@@ -1745,7 +1745,7 @@ export async function getMockRecipes(query) {
                             "weight": 907.18474,
                             "foodCategory": "meats",
                             "foodId": "food_avagutpasew697bkpd0ylbp099n9",
-                            "image": "https://www.edamam.com/food-img/239/2398e80abd77c81317eb3dd2311b00ae.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "½ C white wine vinegar",
@@ -1755,7 +1755,7 @@ export async function getMockRecipes(query) {
                             "weight": 119.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_ai77igmb8f0rj6blsokr8bxx5n2n",
-                            "image": "https://www.edamam.com/food-img/5f6/5f69b84c399d778c4728e9ab4f8065a2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 bay leaves",
@@ -1765,7 +1765,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.2,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_asx39x4ayja4jab6ivj6zayvkblo",
-                            "image": "https://www.edamam.com/food-img/0f9/0f9f5f95df173e9ffaaff2977bef88f3.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 T olive oil",
@@ -1775,7 +1775,7 @@ export async function getMockRecipes(query) {
                             "weight": 9.0,
                             "foodCategory": "Oils",
                             "foodId": "food_b1d1icuad3iktrbqby0hiagafaz7",
-                            "image": "https://www.edamam.com/food-img/4d6/4d651eaa8a353647746290c7a9b29d84.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 garlic cloves, peeled and minced",
@@ -1785,7 +1785,7 @@ export async function getMockRecipes(query) {
                             "weight": 9.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_avtcmx6bgjv1jvay6s6stan8dnyp",
-                            "image": "https://www.edamam.com/food-img/6ee/6ee142951f48aaf94f4312409f8d133d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 organic white onion, peeled and chopped (approximately 1 C)",
@@ -1795,7 +1795,7 @@ export async function getMockRecipes(query) {
                             "weight": 125.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_bmrvi4ob4binw9a5m7l07amlfcoy",
-                            "image": "https://www.edamam.com/food-img/205/205e6bf2399b85d34741892ef91cc603.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 T olive oil",
@@ -1805,7 +1805,7 @@ export async function getMockRecipes(query) {
                             "weight": 13.5,
                             "foodCategory": "Oils",
                             "foodId": "food_b1d1icuad3iktrbqby0hiagafaz7",
-                            "image": "https://www.edamam.com/food-img/4d6/4d651eaa8a353647746290c7a9b29d84.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2-3 T tomato paste",
@@ -1815,7 +1815,7 @@ export async function getMockRecipes(query) {
                             "weight": 13.645833334025475,
                             "foodCategory": "canned vegetables",
                             "foodId": "food_auu2atfal07b6gbd1a5wsawy7u0s",
-                            "image": "https://www.edamam.com/food-img/aef/aef4e029118da71388e526086506053a.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 C dry white wine",
@@ -1825,7 +1825,7 @@ export async function getMockRecipes(query) {
                             "weight": 235.2,
                             "foodCategory": "wines",
                             "foodId": "food_a656mk2a5dmqb2adiamu6beihduu",
-                            "image": "https://www.edamam.com/food-img/a71/a718cf3c52add522128929f1f324d2ab.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 T fresh oregano leaves",
@@ -1835,7 +1835,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_bkkw6v3bdf0sqiazmzyuiax7i8jr",
-                            "image": "https://www.edamam.com/food-img/1b0/1b0eaffb1c261606e0d82fed8e9747a7.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 pounds clams, scrubbed",
@@ -1845,7 +1845,7 @@ export async function getMockRecipes(query) {
                             "weight": 907.18474,
                             "foodCategory": "seafood",
                             "foodId": "food_b12syzgajx227eahiup7wb240d41",
-                            "image": "https://www.edamam.com/food-img/cdb/cdb6d4a1acc0b81c643ba1a52c5cd95b.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 pounds fingerling potatoes, boiled",
@@ -1855,7 +1855,7 @@ export async function getMockRecipes(query) {
                             "weight": 907.18474,
                             "foodCategory": "vegetables",
                             "foodId": "food_b5m473aabh39qbbre3ypaa4uwd7j",
-                            "image": "https://www.edamam.com/food-img/651/6512e82417bce15c2899630c1a2799df.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 T butter",
@@ -1865,7 +1865,7 @@ export async function getMockRecipes(query) {
                             "weight": 9.458333333813071,
                             "foodCategory": "Dairy",
                             "foodId": "food_awz3iefajbk1fwahq9logahmgltj",
-                            "image": "https://www.edamam.com/food-img/713/71397239b670d88c04faa8d05035cab4.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "freshly ground salt",
@@ -1875,7 +1875,7 @@ export async function getMockRecipes(query) {
                             "weight": 19.660550320007033,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "freshly ground pepper",
@@ -1885,7 +1885,7 @@ export async function getMockRecipes(query) {
                             "weight": 9.830275160003517,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_b6ywzluaaxv02wad7s1r9ag4py89",
-                            "image": "https://www.edamam.com/food-img/c6e/c6e5c3bd8d3bc15175d9766971a4d1b2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "fresh organic lemon wedges for serving, optional",
@@ -1895,7 +1895,7 @@ export async function getMockRecipes(query) {
                             "weight": 7.0,
                             "foodCategory": "fruit",
                             "foodId": "food_a6uzc62astrxcgbtzyq59b6fncrr",
-                            "image": "https://www.edamam.com/food-img/70a/70acba3d4c734d7c70ef4efeed85dc8f.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "fresh cilantro for serving, optional",
@@ -1905,7 +1905,7 @@ export async function getMockRecipes(query) {
                             "weight": 32.767583866678386,
                             "foodCategory": "vegetables",
                             "foodId": "food_alhzhuwb4lc7jnb5s6f02by60bzp",
-                            "image": "https://www.edamam.com/food-img/d57/d57e375b6ff99a90c7ee2b1990a1af36.jpg"
+                            "image": "https://picsum.photos/400/400"
                         }
                     ],
                     "calories": 3616.188162878286,
@@ -2542,7 +2542,7 @@ export async function getMockRecipes(query) {
                 "recipe": {
                     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_10dd77ab462c429dc85529732b4afddc",
                     "label": "Carne De Porco A La Antejana",
-                    "image": "https://edamam-product-images.s3.amazonaws.com/web-img/a1e/a1e656eb0e3e99ac490fc41e70abb56c.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFbTvBCBNt9JdjU%2FOx4wXqe8T8ZAFThz8w1LboWgQUJ%2BAiEA9hEyvekiZ9Y8p%2FVoFDd07o6ToYLLjEhXkPNeRanRgoYquAUINhAAGgwxODcwMTcxNTA5ODYiDLHzC%2FEpo83qcWJ8qiqVBX7u6cv1nzGJtRac9ageqsUNji%2F6TH3nwlK162L8KjY0mLBYxY9t2BqnLuQ57XVkin%2F5OUJ8vNlGSu2NrUMDXW58PTo1%2FPFYpjfGqbu9VF0fLGBrKED7vOAWyzEuib0j4eTSI%2Bi6Gw8AruptCVqIF72tjE6n4vFe6FVxPYlpGZB60q1b6dZnsmJRVzGbTO3yvVc47j0cW%2B8Kg0A4EvHw5J5xJcCXCOWOEXYOPnNqxNZpBBvfBIhn3HzvDiijD53xEI8Li2E0dhGmzGzicEWbJth5OB%2FxulPjaouhMYfXoGuczvj0ahqZlq39DZn2BHfLtsX35X0c2%2FxQbieUzkHJJbWYtughwA2HVnDUCMJh%2BPu3EcgJOtUObRMBJ2EI0CKT5GTowkvxIlNPbogVKvxGaVxpJfrO5H%2FfROMMvYUsPSm7A2OBfqLHoULCoFfkPX2Hel5Gb1dd43A%2FgANO45wWSj2tBhwXtyrZFkDuueY8E9tATVEy5C5JrwdgjxPquLaMULjjxkOoORyxRpjS5snJa33RjyUya15OKoI2YQ8Sor9uxcXBVHbdyHwztTujlx54lSD2DV1jCGtOVKhslQPhVn50Pk8qydAtKyGUHCOS86DwsjZPFen5YTgaWBD8PqBG1vEgWwQFTCO1kH4idnHzLZDR%2BhdDbJwCg8%2FzzKw%2BHnQ9WmIG1DBmPzmt%2FxJT662Oc4%2BYR7ZOJ9D9OAda8KJHDkhjTO9EeK6Z7vqv2MHnTa6C9lCWNO1XL%2FGSdWQgACXYEuYnZSAuOog7WFDgnngXR3mE42zMWtfCyLoN%2FkfBwJm3qepgjRwsIWlxFyzpfvdp5MrK8ynkArdF2mAj9H61FLsMXDq%2BsiSG9maTIB6IlaMkTonqb9AwwvLpnwY6sQFu4RFbWwFY0ncvEMRsB7iq1d%2Beefv8fowAosQ3pB%2BjDiCoIZnY6yPS%2Bx%2BD55XaOSiGKW71tjHLOQBAKol64vrIcSVITlOYhlg6dwX9vhDvGxPDDOevuxNFxFSw4n5DI%2FYz6RQUnRkw1%2FNd5tamTqTnX%2FMlv1f7Vy0h73F%2B2fKO5Eh73DvujnoaiW%2FrQ4x6fW%2FMcEg7hxNCZaM6xWEpkzwoVfebav2rbz2E5DoRzWT87Rw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230225T221511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFKALR3RVZ%2F20230225%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=244293bb6a19e765b769db9af2c112cd1d5b49db67374764f155c3f687473da6",
+                    "image": "https://picsum.photos/800/600",
                     "source": "Foodista",
                     "url": "http://www.foodista.com/recipe/BVJQ7RGT/carne-de-porco-a-la-antejana",
                     "shareAs": "http://www.edamam.com/recipe/carne-de-porco-a-la-antejana-10dd77ab462c429dc85529732b4afddc/carne+de+porco",
@@ -2597,7 +2597,7 @@ export async function getMockRecipes(query) {
                             "weight": 1360.77711,
                             "foodCategory": "meats",
                             "foodId": "food_aisetlvawqaqp8a2uc28uaf46l5m",
-                            "image": "https://www.edamam.com/food-img/d55/d553f23d42b9c8fb314416ccd5cde3d2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Pork Seasonings (see below)",
@@ -2607,7 +2607,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.0,
                             "foodCategory": "meats",
                             "foodId": "food_aisetlvawqaqp8a2uc28uaf46l5m",
-                            "image": "https://www.edamam.com/food-img/d55/d553f23d42b9c8fb314416ccd5cde3d2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "Pork Seasonings (see below)",
@@ -2617,7 +2617,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_aj7w3xab0epj7cbgkbkpwadysovd",
-                            "image": "https://www.edamam.com/food-img/c23/c23e20823b442067307aa436969358f1.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 large large onion or 2 small onions, chopped",
@@ -2627,7 +2627,7 @@ export async function getMockRecipes(query) {
                             "weight": 146.484375,
                             "foodCategory": "vegetables",
                             "foodId": "food_bmrvi4ob4binw9a5m7l07amlfcoy",
-                            "image": "https://www.edamam.com/food-img/205/205e6bf2399b85d34741892ef91cc603.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 cloves of garlic, chopped",
@@ -2637,7 +2637,7 @@ export async function getMockRecipes(query) {
                             "weight": 9.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_avtcmx6bgjv1jvay6s6stan8dnyp",
-                            "image": "https://www.edamam.com/food-img/6ee/6ee142951f48aaf94f4312409f8d133d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 bay leaves, crushed",
@@ -2647,7 +2647,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.7999999999999998,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_asx39x4ayja4jab6ivj6zayvkblo",
-                            "image": "https://www.edamam.com/food-img/0f9/0f9f5f95df173e9ffaaff2977bef88f3.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 tablespoons tomato paste",
@@ -2657,7 +2657,7 @@ export async function getMockRecipes(query) {
                             "weight": 32.0,
                             "foodCategory": "canned vegetables",
                             "foodId": "food_auu2atfal07b6gbd1a5wsawy7u0s",
-                            "image": "https://www.edamam.com/food-img/aef/aef4e029118da71388e526086506053a.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 1/2 cups dry white wine",
@@ -2667,7 +2667,7 @@ export async function getMockRecipes(query) {
                             "weight": 588.0,
                             "foodCategory": "wines",
                             "foodId": "food_a656mk2a5dmqb2adiamu6beihduu",
-                            "image": "https://www.edamam.com/food-img/a71/a718cf3c52add522128929f1f324d2ab.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "30 mahogany clams",
@@ -2677,7 +2677,7 @@ export async function getMockRecipes(query) {
                             "weight": 435.0,
                             "foodCategory": "seafood",
                             "foodId": "food_b12syzgajx227eahiup7wb240d41",
-                            "image": "https://www.edamam.com/food-img/cdb/cdb6d4a1acc0b81c643ba1a52c5cd95b.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "parsley",
@@ -2687,7 +2687,7 @@ export async function getMockRecipes(query) {
                             "weight": 26.018614850000006,
                             "foodCategory": "vegetables",
                             "foodId": "food_b244pqdazw24zobr5vqu2bf0uid8",
-                            "image": "https://www.edamam.com/food-img/46a/46a132e96626d7989b4d6ed8c91f4da0.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "salt and pepper, to taste",
@@ -2697,7 +2697,7 @@ export async function getMockRecipes(query) {
                             "weight": 15.611168910000002,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "salt and pepper, to taste",
@@ -2707,7 +2707,7 @@ export async function getMockRecipes(query) {
                             "weight": 7.805584455000001,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_b6ywzluaaxv02wad7s1r9ag4py89",
-                            "image": "https://www.edamam.com/food-img/c6e/c6e5c3bd8d3bc15175d9766971a4d1b2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 teaspoons paprika",
@@ -2717,7 +2717,7 @@ export async function getMockRecipes(query) {
                             "weight": 4.6,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 teaspoons salt",
@@ -2727,7 +2727,7 @@ export async function getMockRecipes(query) {
                             "weight": 12.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon cayenne pepper",
@@ -2737,7 +2737,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.8,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a8iooz3aris8gba605l07brngnrx",
-                            "image": "https://www.edamam.com/food-img/374/3742b9434a0fb66a45e0dd6d227ba669.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon garlic powder",
@@ -2747,7 +2747,7 @@ export async function getMockRecipes(query) {
                             "weight": 3.1,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_boq94r1a036492bdup9u1beyph0l",
-                            "image": "https://www.edamam.com/food-img/5c3/5c3db1d5a1a16b1f0a74796f74dd5985.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon onion powder",
@@ -2757,7 +2757,7 @@ export async function getMockRecipes(query) {
                             "weight": 2.4,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_bmv8z27b1o25vcbu41ooyawd2zj4",
-                            "image": "https://www.edamam.com/food-img/1e7/1e73e6f5dd96bb233abc0fcc05fb0ec8.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon cracked black pepper",
@@ -2767,7 +2767,7 @@ export async function getMockRecipes(query) {
                             "weight": 2.9,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_b6ywzluaaxv02wad7s1r9ag4py89",
-                            "image": "https://www.edamam.com/food-img/c6e/c6e5c3bd8d3bc15175d9766971a4d1b2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon dried thyme",
@@ -2777,7 +2777,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_avsq22zadwyb5cb5sl1byaa4mbo8",
-                            "image": "https://www.edamam.com/food-img/89b/89b37a04e46e052671d73addcb84aa51.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon dried oregano",
@@ -2787,7 +2787,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_bkkw6v3bdf0sqiazmzyuiax7i8jr",
-                            "image": "https://www.edamam.com/food-img/1b0/1b0eaffb1c261606e0d82fed8e9747a7.jpg"
+                            "image": "https://picsum.photos/400/400"
                         }
                     ],
                     "calories": 3733.2651461280507,
@@ -3424,7 +3424,7 @@ export async function getMockRecipes(query) {
                 "recipe": {
                     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_165032315f38620829119425c3a88c47",
                     "label": "Pork and Clams (Carne de Porco e Amêijoas) Recipe",
-                    "image": "https://edamam-product-images.s3.amazonaws.com/web-img/20d/20d240bb68003516e0cf1c39c085caff.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFbTvBCBNt9JdjU%2FOx4wXqe8T8ZAFThz8w1LboWgQUJ%2BAiEA9hEyvekiZ9Y8p%2FVoFDd07o6ToYLLjEhXkPNeRanRgoYquAUINhAAGgwxODcwMTcxNTA5ODYiDLHzC%2FEpo83qcWJ8qiqVBX7u6cv1nzGJtRac9ageqsUNji%2F6TH3nwlK162L8KjY0mLBYxY9t2BqnLuQ57XVkin%2F5OUJ8vNlGSu2NrUMDXW58PTo1%2FPFYpjfGqbu9VF0fLGBrKED7vOAWyzEuib0j4eTSI%2Bi6Gw8AruptCVqIF72tjE6n4vFe6FVxPYlpGZB60q1b6dZnsmJRVzGbTO3yvVc47j0cW%2B8Kg0A4EvHw5J5xJcCXCOWOEXYOPnNqxNZpBBvfBIhn3HzvDiijD53xEI8Li2E0dhGmzGzicEWbJth5OB%2FxulPjaouhMYfXoGuczvj0ahqZlq39DZn2BHfLtsX35X0c2%2FxQbieUzkHJJbWYtughwA2HVnDUCMJh%2BPu3EcgJOtUObRMBJ2EI0CKT5GTowkvxIlNPbogVKvxGaVxpJfrO5H%2FfROMMvYUsPSm7A2OBfqLHoULCoFfkPX2Hel5Gb1dd43A%2FgANO45wWSj2tBhwXtyrZFkDuueY8E9tATVEy5C5JrwdgjxPquLaMULjjxkOoORyxRpjS5snJa33RjyUya15OKoI2YQ8Sor9uxcXBVHbdyHwztTujlx54lSD2DV1jCGtOVKhslQPhVn50Pk8qydAtKyGUHCOS86DwsjZPFen5YTgaWBD8PqBG1vEgWwQFTCO1kH4idnHzLZDR%2BhdDbJwCg8%2FzzKw%2BHnQ9WmIG1DBmPzmt%2FxJT662Oc4%2BYR7ZOJ9D9OAda8KJHDkhjTO9EeK6Z7vqv2MHnTa6C9lCWNO1XL%2FGSdWQgACXYEuYnZSAuOog7WFDgnngXR3mE42zMWtfCyLoN%2FkfBwJm3qepgjRwsIWlxFyzpfvdp5MrK8ynkArdF2mAj9H61FLsMXDq%2BsiSG9maTIB6IlaMkTonqb9AwwvLpnwY6sQFu4RFbWwFY0ncvEMRsB7iq1d%2Beefv8fowAosQ3pB%2BjDiCoIZnY6yPS%2Bx%2BD55XaOSiGKW71tjHLOQBAKol64vrIcSVITlOYhlg6dwX9vhDvGxPDDOevuxNFxFSw4n5DI%2FYz6RQUnRkw1%2FNd5tamTqTnX%2FMlv1f7Vy0h73F%2B2fKO5Eh73DvujnoaiW%2FrQ4x6fW%2FMcEg7hxNCZaM6xWEpkzwoVfebav2rbz2E5DoRzWT87Rw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230225T221511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFKALR3RVZ%2F20230225%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8390a596b725393bc48aee2eaefa91311ba4539205ef7dabea5d8362a458ce07",
+                    "image": "https://picsum.photos/800/600",
                     "source": "familycookbookproject.com",
                     "url": "https://familycookbookproject.com/recipe/3995396/pork-and-clams-carne-de-porco-e-amijoas.html",
                     "shareAs": "http://www.edamam.com/recipe/pork-and-clams-carne-de-porco-e-am%C3%AAijoas-recipe-165032315f38620829119425c3a88c47/carne+de+porco",
@@ -3475,7 +3475,7 @@ export async function getMockRecipes(query) {
                             "weight": 352.79999999999995,
                             "foodCategory": "wines",
                             "foodId": "food_a656mk2a5dmqb2adiamu6beihduu",
-                            "image": "https://www.edamam.com/food-img/a71/a718cf3c52add522128929f1f324d2ab.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 teaspoon paprika",
@@ -3485,7 +3485,7 @@ export async function getMockRecipes(query) {
                             "weight": 2.3,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_a9dpcnjb883g67b3lq82ca0421ql",
-                            "image": "https://www.edamam.com/food-img/474/474d63763b9d8b9da98c5f43a114648c.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 teaspoons salt",
@@ -3495,7 +3495,7 @@ export async function getMockRecipes(query) {
                             "weight": 12.0,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_btxz81db72hwbra2pncvebzzzum9",
-                            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1/2 teaspoon black pepper",
@@ -3505,7 +3505,7 @@ export async function getMockRecipes(query) {
                             "weight": 1.45,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_b6ywzluaaxv02wad7s1r9ag4py89",
-                            "image": "https://www.edamam.com/food-img/c6e/c6e5c3bd8d3bc15175d9766971a4d1b2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 cloves garlic, peeled and cut in half",
@@ -3515,7 +3515,7 @@ export async function getMockRecipes(query) {
                             "weight": 6.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_avtcmx6bgjv1jvay6s6stan8dnyp",
-                            "image": "https://www.edamam.com/food-img/6ee/6ee142951f48aaf94f4312409f8d133d.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 bay leaf",
@@ -3525,7 +3525,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.6,
                             "foodCategory": "Condiments and sauces",
                             "foodId": "food_asx39x4ayja4jab6ivj6zayvkblo",
-                            "image": "https://www.edamam.com/food-img/0f9/0f9f5f95df173e9ffaaff2977bef88f3.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 pounds pork loin, cut into 1 inch cubes",
@@ -3535,7 +3535,7 @@ export async function getMockRecipes(query) {
                             "weight": 907.18474,
                             "foodCategory": "meats",
                             "foodId": "food_aisetlvawqaqp8a2uc28uaf46l5m",
-                            "image": "https://www.edamam.com/food-img/d55/d553f23d42b9c8fb314416ccd5cde3d2.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "3 teaspoons olive oil, divided",
@@ -3545,7 +3545,7 @@ export async function getMockRecipes(query) {
                             "weight": 13.5,
                             "foodCategory": "Oils",
                             "foodId": "food_b1d1icuad3iktrbqby0hiagafaz7",
-                            "image": "https://www.edamam.com/food-img/4d6/4d651eaa8a353647746290c7a9b29d84.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "2 onions, peeled and thinly sliced",
@@ -3555,7 +3555,7 @@ export async function getMockRecipes(query) {
                             "weight": 250.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_bmrvi4ob4binw9a5m7l07amlfcoy",
-                            "image": "https://www.edamam.com/food-img/205/205e6bf2399b85d34741892ef91cc603.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1 can Hunts canned diced tomatoes packed in juice.",
@@ -3565,7 +3565,7 @@ export async function getMockRecipes(query) {
                             "weight": 190.0,
                             "foodCategory": "canned vegetables",
                             "foodId": "food_bnmkkwqa9h2p87bz171eoby0bsey",
-                            "image": "https://www.edamam.com/food-img/d4e/d4e8110d51db4311bc894167a8f77816.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1/4 teaspoon crushed red pepper flakes",
@@ -3575,7 +3575,7 @@ export async function getMockRecipes(query) {
                             "weight": 0.19270833334310772,
                             "foodCategory": "vegetables",
                             "foodId": "food_bispmxiaijcuxcagex14mbhk2o48",
-                            "image": "https://www.edamam.com/food-img/6cb/6cb8e4510251a322178f6e191b3a7b1b.jpeg"
+                            "image": "https://picsum.photos/400/400g"
                         },
                         {
                             "text": "24 small clams in shell, scrubbed",
@@ -3585,7 +3585,7 @@ export async function getMockRecipes(query) {
                             "weight": 216.0,
                             "foodCategory": "seafood",
                             "foodId": "food_btfki7zbcnzgnkai1iruqbq7lalz",
-                            "image": "https://www.edamam.com/food-img/cdb/cdb6d4a1acc0b81c643ba1a52c5cd95b.jpg"
+                            "image": "https://picsum.photos/400/400"
                         },
                         {
                             "text": "1/4 cup chopped fresh cilantro",
@@ -3595,7 +3595,7 @@ export async function getMockRecipes(query) {
                             "weight": 4.0,
                             "foodCategory": "vegetables",
                             "foodId": "food_alhzhuwb4lc7jnb5s6f02by60bzp",
-                            "image": "https://www.edamam.com/food-img/d57/d57e375b6ff99a90c7ee2b1990a1af36.jpg"
+                            "image": "https://picsum.photos/400/400"
                         }
                     ],
                     "calories": 2543.5096602000326,

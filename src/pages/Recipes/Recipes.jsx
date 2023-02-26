@@ -20,17 +20,17 @@ export default function Recipes() {
         }
         
         // Get recipes.
-        let recipes = await RecipeService.getMockRecipes(query) // MOCK
+        let response = await RecipeService.getRecipes(query) // MOCK
 
         // Handle api exception.
-        if (recipes === null) {
+        if (response === null) {
             setRecipes([])
             alert("not handled exception") //TODO
             return
         }
 
         // Update recipe list.
-        setRecipes(recipes.hits)
+        setRecipes(response.hits)
     }
     
     return (
@@ -60,8 +60,9 @@ export default function Recipes() {
                     </div>
                 </div>
 
-                <main className="w-full h-[calc(100vh_-_136px)] sm:h-[calc(100vh_-_80px)] p-2 overflow-auto">
+                <main className="w-full h-[calc(100vh_-_136px)] sm:h-[calc(100vh_-_80px)] p-4 overflow-auto">
                     <div className="max-w-7xl h-full">
+
                         {/* Empty state */}
                         <div className={(recipes.length === 0 ? 'flex': 'hidden')+ ' h-full w-full flex-col gap-2 justify-center items-center'}>
                             <img className="grayscale  h-40 w-auto opacity-60" src={LogoBlack} alt="Cookify "/>
@@ -75,14 +76,16 @@ export default function Recipes() {
                         {/* Query results */}
                         <div className={recipes.length !== 0 ? 'flex': 'hidden'}>
 
-                            <div className='flex flex-wrap'>
-                                {recipes.map(recipe => (
+                            <div className='flex flex-wrap gap-4'>
+                                {recipes.map(obj => (
                                     <Recipe 
-                                    key={recipe.recipe.label}
-                                    title={recipe.recipe.label} 
-                                    calories={recipe.recipe.calories} 
-                                    image={recipe.recipe.image}
-                                    ingredients={recipe.recipe.ingredients} />
+                                    //key={obj.recipe.label}
+                                    healthLabels={obj.recipe.healthLabels}
+                                    title={obj.recipe.label} 
+                                    calories={obj.recipe.calories} 
+                                    image={obj.recipe.image}
+                                    ingredients={obj.recipe.ingredients}
+                                    servings={obj.recipe.yield} />
                                 ))}
                             </div>
                             
