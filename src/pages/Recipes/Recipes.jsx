@@ -10,17 +10,18 @@ export default function Recipes() {
 
     const [recipes, setRecipes] = useState([]);
     const [query, setQuery] = useState('')
+    const [keywords, setKeywords] = useState('')
 
     async function handleSearch() {
         
         // Validate required paarams.
-        if (!query) {
+        if (!keywords) {
             setRecipes([])
             return
         }
         
         // Get recipes.
-        let response = await RecipeService.getRecipes(query) // MOCK
+        let response = await RecipeService.getMockRecipes(keywords) // MOCK
 
         // Handle api exception.
         if (response === null) {
@@ -29,7 +30,8 @@ export default function Recipes() {
             return
         }
 
-        // Update recipe list.
+        // Update content.
+        setQuery(keywords)
         setRecipes(response.hits)
     }
     
@@ -37,7 +39,11 @@ export default function Recipes() {
         <> 
             <div className="flex flex-col w-full h-screen">
                 <div className="sticky w-full top-0 z-10 sm:flex-row flex-col flex py-2 bg-gray-100 divide-x-2 shadow-lg">
-                    <div className="flex flex-shrink-0 justify-center items-center py-2 px-4">
+                    <div className="flex flex-shrink-0 justify-center items-center py-2 px-4 cursor-pointer"
+                        onClick={() => {
+                            setKeywords('')
+                            setRecipes([])
+                        }}>
                         <img className="h-12 w-auto" src={Logo} alt="Cookify "/>
                     </div>
 
@@ -46,13 +52,14 @@ export default function Recipes() {
                             <MagnifyingGlassIcon className="h-8 w-8 text-gray-600"/>
                         </div>
                         <input autoFocus 
-                            id="search-field" 
-                            className="h-full w-full text-lg font-medium border rounded-md border-gray-400 text-gray-900 placeholder-gray-400 focus:border-gray-400 outline-none focus:ring-1"
+                            id="search-field"
+                            value={keywords}
+                            className="h-full p-2 w-full text-lg font-medium border rounded-md border-gray-400 text-gray-900 placeholder-gray-400 focus:border-gray-400 outline-none focus:ring-1"
                             placeholder="Type one o more keywords"
                             onKeyDown={(e) => { 
                                 if(e.key === 'Enter') handleSearch()
                             }}
-                            onInput={(e) => {setQuery(e.target.value)}}/>
+                            onInput={(e) => {setKeywords(e.target.value)}}/>
                         <button className='text-white font-medium hover:bg-green-800 bg-green-cookify p-2 rounded-md'
                                 onClick={() => handleSearch()}>
                             Search
@@ -74,9 +81,14 @@ export default function Recipes() {
                         </div>
 
                         {/* Query results */}
-                        <div className={recipes.length !== 0 ? 'flex': 'hidden'}>
+                        <div className={recipes.length !== 0 ? 'flex flex-col gap-4': 'hidden'}>
 
-                            <div className='flex flex-wrap gap-4'>
+                            <div className='flex justify-center items-center'>
+                                <img className="grayscale  h-12 w-auto opacity-60" src={LogoBlack} alt="Cookify "/>
+                                <div className='text-lg font-medium font-bangers text-green-cookify'>Results for {query}:</div>
+                            </div>
+
+                            <div className='flex flex-wrap justify-center gap-4 '>
                                 {recipes.map(obj => (
                                     <Recipe 
                                     //key={obj.recipe.label}
@@ -85,7 +97,8 @@ export default function Recipes() {
                                     calories={obj.recipe.calories} 
                                     image={obj.recipe.image}
                                     ingredients={obj.recipe.ingredients}
-                                    servings={obj.recipe.yield} />
+                                    servings={obj.recipe.yield} 
+                                    sourceUrl={obj.recipe.url}/>
                                 ))}
                             </div>
                             

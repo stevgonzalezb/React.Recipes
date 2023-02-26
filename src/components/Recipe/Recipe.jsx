@@ -1,8 +1,9 @@
 import React from "react"
 
-const Recipe = ({healthLabels, title, calories, image, ingredients, servings}) => {
+const Recipe = ({healthLabels, title, calories, image, servings, sourceUrl}) => {
     return(
-        <div className="flex flex-col min-w-[300px] max-w-[600px] bg-gray-100 shadow-md rounded-md border">
+        <div className="flex flex-col min-w-[300px] max-w-[600px] bg-gray-100 shadow-md rounded-md border cursor-pointer"
+            onClick={() => window.open(sourceUrl)}>
             <div className="flex flex-col sm:flex-row p-2 gap-2">
                 <img className="h-36 sm:w-36 rounded-md" src={image} alt=""/>
 
@@ -19,7 +20,7 @@ const Recipe = ({healthLabels, title, calories, image, ingredients, servings}) =
                             <div className="flex justify-center items-center gap-1">
                                 <div className="w-2 h-2 rounded-full bg-lime-600"></div>
                                 <div className="text-gray-900 text-sm font-medium ">
-                                    {parseInt(servings)} Servings
+                                    {parseInt(servings)} servings
                                 </div>
                             </div>
                             <div className="flex justify-center items-center gap-1">
@@ -33,16 +34,6 @@ const Recipe = ({healthLabels, title, calories, image, ingredients, servings}) =
                     </div>
                 </div>
             </div>
-
-
-                        {/* <h1>{title}</h1>
-            <ol>
-                {ingredients.map(ingredient => (
-                    <li>{ingredient.text}</li>
-                ))}
-            </ol>
-            <p>{calories}</p>
-            <img className="" src={image} alt=""/> */}
         </div>
 
 
