@@ -21,8 +21,8 @@ export default function Recipes() {
         }
         
         // Get recipes.
-        let response = await RecipeService.getMockRecipes(keywords) // MOCK
-
+        let response = await RecipeService.getRecipes(keywords) 
+        
         // Handle api exception.
         if (response === null) {
             setRecipes([])
