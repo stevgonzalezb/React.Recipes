@@ -67,7 +67,7 @@ export default function Recipes() {
                     </div>
                 </div>
 
-                <main className="w-full h-[calc(100vh_-_136px)] sm:h-[calc(100vh_-_80px)] p-4 overflow-auto">
+                <main className="w-full h-[calc(100vh_-_136px)] sm:h-[calc(100vh_-_80px)] p-4 overflow-auto bg-gradient-to-br from-gray-50  to-green-cookify">
                     <div className="max-w-7xl h-full">
 
                         {/* Empty state */}
@@ -84,8 +84,8 @@ export default function Recipes() {
                         <div className={recipes.length !== 0 ? 'flex flex-col gap-4': 'hidden'}>
 
                             <div className='flex justify-center items-center'>
-                                <img className="grayscale  h-12 w-auto opacity-60" src={LogoBlack} alt="Cookify "/>
-                                <div className='text-lg font-medium font-bangers text-green-cookify'>Results for {query}:</div>
+                                {/* <img className="grayscale  h-12 w-auto opacity-60" src={LogoBlack} alt="Cookify "/> */}
+                                <div className='text-2xl font-medium font-bangers text-green-cookify'>Results for {query}:</div>
                             </div>
 
                             <div className='flex flex-wrap justify-center gap-4 '>
