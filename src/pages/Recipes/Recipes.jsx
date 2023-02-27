@@ -1,9 +1,9 @@
-import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import LogoBlack from '../../assets/logo-black.png'
 import Logo from '../../assets/logo-no-background.png'
 import Recipe from "../../components/Recipe/Recipe"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import * as RecipeService from "../../services/recipes"
 
 export default function Recipes() {
@@ -84,7 +84,7 @@ export default function Recipes() {
                         <div className={recipes.length !== 0 ? 'flex flex-col gap-4': 'hidden'}>
 
                             <div className='flex justify-center items-center'>
-                                {/* <img className="grayscale  h-12 w-auto opacity-60" src={LogoBlack} alt="Cookify "/> */}
+                                <img className="grayscale  h-12 w-auto opacity-60" src={LogoBlack} alt="Cookify "/>
                                 <div className='text-2xl font-medium font-bangers text-green-cookify'>Results for {query}:</div>
                             </div>
 
@@ -98,7 +98,8 @@ export default function Recipes() {
                                     image={obj.recipe.image}
                                     ingredients={obj.recipe.ingredients}
                                     servings={obj.recipe.yield} 
-                                    sourceUrl={obj.recipe.url}/>
+                                    sourceUrl={obj.recipe.url}
+                                    cautions={obj.recipe.cautions}/>
                                 ))}
                             </div>
                             
